@@ -56,7 +56,8 @@ To run the mod: Fallout 4 1.10.163, F4SE 0.6.23, Address Library for F4SE Plugin
 
 ## Licence
 
-GPL-3.0-or-later for the code and original art in this repository: see `LICENSE`.
+GPL-3.0-or-later for the code and original art in this repository: `LICENSE` is the licence text, `NOTICE` is the
+copyright notice and the list of third-party files.
 `framework/third_party/nlohmann/json.hpp` is MIT, copyright its authors. `framework/plugin/PrismaUI_F4_API.h`
 is Prisma UI's own API header, copied in as that header invites, copyright its authors. The fonts under
 `ui/views` and `hud/views` are under the SIL Open Font License; each font folder carries the licence text.
