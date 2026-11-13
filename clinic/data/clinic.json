@@ -1,0 +1,4114 @@
+{
+  "plugin": "Cyberware - Clinic.esp",
+  "donor": "Fallout4.esm|15B546",
+  "cell": {
+    "edid": "CW_VargaClinic01",
+    "name": "Back Room"
+  },
+  "strip": [
+    "15B68B",
+    "15B68C",
+    "15B68D",
+    "15B68E",
+    "15B68F",
+    "15B690",
+    "15B6DD",
+    "15B6A4",
+    "15B6A5",
+    "15B6A7",
+    "15B6A9",
+    "15B6AA",
+    "15B6BE",
+    "15B6EC",
+    "15B6F3",
+    "15B6B1",
+    "15B6F5",
+    "15B6F7",
+    "15B6F8",
+    "15B6F9",
+    "15B6FA",
+    "15B6FB",
+    "15B6FC",
+    "15B6FD",
+    "15B700",
+    "15B6EE",
+    "15B6EF",
+    "15B6F0",
+    "15B6F1",
+    "15B6F2",
+    "15B702",
+    "15BF2D",
+    "15B6E6",
+    "15BF2C",
+    "15BF32",
+    "15BF2F",
+    "15B6DE",
+    "15B6DF",
+    "15B6E0",
+    "15B6E1",
+    "15B6E7",
+    "15B6E8",
+    "15B6E9",
+    "15B6EA",
+    "15B6EB",
+    "15B6DC",
+    "15B6B9",
+    "15B6BA"
+  ],
+  "dress": [
+    {
+      "base": "Gurney02Static",
+      "pos": [
+        1668.0,
+        2165.0,
+        567.5
+      ],
+      "rotZ": 1.571
+    },
+    {
+      "base": "HospitalLights02StandLit",
+      "pos": [
+        1750.0,
+        2122.0,
+        567.5
+      ],
+      "rotZ": 2.6
+    },
+    {
+      "base": "MetalTable02",
+      "pos": [
+        1740.0,
+        1965.0,
+        567.5
+      ],
+      "rotZ": 1.571
+    },
+    {
+      "base": "SurgicalTray01",
+      "pos": [
+        1751.0,
+        1947.0,
+        626.5
+      ],
+      "rotZ": 0.4
+    },
+    {
+      "base": "SurgicalTray01",
+      "pos": [
+        1747.0,
+        1959.7,
+        624.0
+      ],
+      "rotZ": 2.1
+    },
+    {
+      "base": "Scalpel",
+      "pos": [
+        1753.0,
+        1950.0,
+        625.0
+      ],
+      "rotZ": 1.0
+    },
+    {
+      "base": "SurgicalScalpel",
+      "pos": [
+        1747.0,
+        1962.0,
+        625.0
+      ],
+      "rotZ": 4.2
+    },
+    {
+      "base": "Bonesaw",
+      "pos": [
+        1740.0,
+        1971.5,
+        623.5
+      ],
+      "rotZ": 2.9
+    },
+    {
+      "base": "Institute_Tweezers",
+      "pos": [
+        1747.6,
+        1983.0,
+        625.5
+      ],
+      "rotZ": 0.3
+    },
+    {
+      "base": "Bloodpack",
+      "pos": [
+        1762.5,
+        2022.5,
+        623.5
+      ],
+      "rotZ": 0.9
+    },
+    {
+      "base": "Bloodpack",
+      "pos": [
+        1740.3,
+        2023.5,
+        623.5
+      ],
+      "rotZ": 5.1
+    },
+    {
+      "base": "Stimpak",
+      "pos": [
+        1750.0,
+        1978.5,
+        625.5
+      ],
+      "rotZ": 1.8
+    },
+    {
+      "base": "MedX",
+      "pos": [
+        1750.0,
+        1958.0,
+        625.0
+      ],
+      "rotZ": 0.4
+    },
+    {
+      "base": "RadAway",
+      "pos": [
+        1752.0,
+        1970.5,
+        628.5
+      ],
+      "rotZ": 2.2
+    },
+    {
+      "base": "LabBeaker",
+      "pos": [
+        1748.0,
+        1942.0,
+        625.0
+      ],
+      "rotZ": 0.0
+    },
+    {
+      "base": "Beaker_Stand",
+      "pos": [
+        1749.0,
+        1965.0,
+        625.0
+      ],
+      "rotZ": 0.0
+    },
+    {
+      "base": "Prewar_Cooler_Empty",
+      "pos": [
+        1749.0,
+        2018.0,
+        567.5
+      ],
+      "rotZ": 1.571
+    },
+    {
+      "base": "Bloodpack",
+      "pos": [
+        1751.0,
+        2012.0,
+        602.0
+      ],
+      "rotZ": 0.0
+    },
+    {
+      "base": "ChemistrySetBeaker01",
+      "pos": [
+        1753.0,
+        2025.5,
+        594.5
+      ],
+      "rotZ": 0.0
+    },
+    {
+      "base": "ChemistrySetBeaker03",
+      "pos": [
+        1750.0,
+        2011.5,
+        594.5
+      ],
+      "rotZ": 0.8
+    },
+    {
+      "base": "EnamelBucket01",
+      "pos": [
+        1788.0,
+        2068.0,
+        567.5
+      ],
+      "rotZ": 5.8
+    },
+    {
+      "base": "CeilingLamp01On",
+      "pos": [
+        1835.0,
+        2065.0,
+        742.0
+      ],
+      "rotZ": 4.5
+    },
+    {
+      "base": "defaultLightWarm01NS",
+      "pos": [
+        1835.0,
+        2065.0,
+        730.0
+      ],
+      "rotZ": 0.0
+    },
+    {
+      "base": "DefaultLightWhite01Spot",
+      "pos": [
+        1835.0,
+        2065.0,
+        745.0
+      ],
+      "rotZ": 0.0
+    },
+    {
+      "base": "LightBeamThin01Short02Dim",
+      "pos": [
+        1835.0,
+        2065.0,
+        744.0
+      ],
+      "rotZ": 0.0
+    },
+    {
+      "base": "MistLargeRoundDustyDim",
+      "pos": [
+        1835.0,
+        2065.0,
+        690.0
+      ],
+      "rotZ": 0.0
+    },
+    {
+      "base": "defaultLightWarm01NS",
+      "pos": [
+        1750.0,
+        2120.0,
+        700.0
+      ],
+      "rotZ": 0.0
+    },
+    {
+      "base": "OfficeDesk01",
+      "pos": [
+        2340.0,
+        1900.0,
+        567.5
+      ],
+      "rotZ": 4.712
+    },
+    {
+      "base": "NpcChairHighTechRoundChairDirtySit01",
+      "pos": [
+        2308.0,
+        1900.0,
+        567.5
+      ],
+      "rotZ": 1.571
+    },
+    {
+      "base": "InsMicroscope01",
+      "pos": [
+        2345.0,
+        1872.0,
+        624.0
+      ],
+      "rotZ": 5.9
+    },
+    {
+      "base": "DeskLamp03On",
+      "pos": [
+        2347.0,
+        1932.0,
+        624.0
+      ],
+      "rotZ": 0.2
+    },
+    {
+      "base": "defaultLightWarm01NS",
+      "pos": [
+        2335.0,
+        1905.0,
+        650.0
+      ],
+      "rotZ": 0.0
+    },
+    {
+      "base": "HighPoly_SurgicalJournal01",
+      "pos": [
+        2338.0,
+        1912.0,
+        624.3
+      ],
+      "rotZ": 0.4
+    },
+    {
+      "base": "HighPoly_SurgicalJournal03",
+      "pos": [
+        2337.0,
+        1917.0,
+        626.5
+      ],
+      "rotZ": 0.9
+    },
+    {
+      "base": "InstituteMedkit01",
+      "pos": [
+        2337.2,
+        1890.8,
+        624.0
+      ],
+      "rotZ": 1.6
+    },
+    {
+      "base": "OfficeFileCabinet03_Steel",
+      "pos": [
+        2332.0,
+        1838.0,
+        567.5
+      ],
+      "rotZ": 0.0,
+      "lockLevel": 75
+    },
+    {
+      "base": "Loot_Prewar_Medkit_Wall",
+      "pos": [
+        2333.0,
+        1935.0,
+        650.0
+      ],
+      "rotZ": 4.712
+    },
+    {
+      "base": "MetalTable02",
+      "pos": [
+        2150.0,
+        2138.0,
+        567.5
+      ],
+      "rotZ": 0.0
+    },
+    {
+      "base": "BiometricScanner",
+      "pos": [
+        2145.0,
+        2130.0,
+        624.0
+      ],
+      "rotZ": 0.7
+    },
+    {
+      "base": "CircuitBoardMilitary",
+      "pos": [
+        2156.0,
+        2146.0,
+        624.2
+      ],
+      "rotZ": 2.4
+    },
+    {
+      "base": "DuctTape01",
+      "pos": [
+        2160.0,
+        2128.0,
+        624.0
+      ],
+      "rotZ": 0.0
+    },
+    {
+      "base": "Beaker02",
+      "pos": [
+        2265.0,
+        1706.0,
+        713.5
+      ],
+      "rotZ": 0.0
+    },
+    {
+      "base": "MuseumDividerSingle01",
+      "pos": [
+        1838.0,
+        2330.0,
+        567.5
+      ],
+      "rotZ": 1.571
+    },
+    {
+      "base": "OfficeBoxPapers03",
+      "pos": [
+        1762.0,
+        2420.0,
+        567.5
+      ],
+      "rotZ": 0.5
+    },
+    {
+      "base": "OfficeBoxPapers01",
+      "pos": [
+        1760.0,
+        2452.0,
+        567.5
+      ],
+      "rotZ": 1.2
+    },
+    {
+      "base": "Clothes_InstituteLabCoat",
+      "pos": [
+        1888.0,
+        1592.0,
+        610.0
+      ],
+      "rotZ": 1.2
+    },
+    {
+      "base": "BloodpackGlowing",
+      "pos": [
+        1929.0,
+        2452.0,
+        624.5
+      ],
+      "rotZ": 1.2
+    },
+    {
+      "base": "MetalBucket",
+      "pos": [
+        1812.0,
+        2416.0,
+        567.5
+      ],
+      "rotZ": 0.3
+    },
+    {
+      "base": "Loot_Toolbox",
+      "pos": [
+        2004.0,
+        1930.0,
+        567.5
+      ],
+      "rotZ": 0.9
+    },
+    {
+      "base": "TowelBathClean01",
+      "pos": [
+        2181.5,
+        1705.9,
+        713.5
+      ],
+      "rotZ": 1.401
+    },
+    {
+      "base": "TowelBathClean01a",
+      "pos": [
+        2198.4,
+        1706.2,
+        713.5
+      ],
+      "rotZ": 3.446
+    },
+    {
+      "base": "TowelBathClean01b",
+      "pos": [
+        2218.5,
+        1705.8,
+        713.5
+      ],
+      "rotZ": 5.365
+    },
+    {
+      "base": "WoodTtubeRack",
+      "pos": [
+        2237.6,
+        1704.8,
+        713.5
+      ],
+      "rotZ": 2.346
+    },
+    {
+      "base": "LabBeaker",
+      "pos": [
+        2256.5,
+        1706.9,
+        713.5
+      ],
+      "rotZ": 5.626
+    },
+    {
+      "base": "ChemistrySetBeaker02",
+      "pos": [
+        2274.3,
+        1705.6,
+        713.5
+      ],
+      "rotZ": 4.34
+    },
+    {
+      "base": "ChemistrySetBeaker04",
+      "pos": [
+        2295.2,
+        1705.8,
+        713.5
+      ],
+      "rotZ": 3.552
+    },
+    {
+      "base": "HighPoly_SurgicalJournal02",
+      "pos": [
+        2312.1,
+        1705.7,
+        713.5
+      ],
+      "rotZ": 4.101
+    },
+    {
+      "base": "HighPoly_SurgicalJournal05",
+      "pos": [
+        2333.4,
+        1705.1,
+        713.5
+      ],
+      "rotZ": 4.842
+    },
+    {
+      "base": "CoffeeCup01clean",
+      "pos": [
+        2333.3,
+        1706.6,
+        713.5
+      ],
+      "rotZ": 3.138
+    },
+    {
+      "base": "NpcStoolFederalistSit01Static",
+      "pos": [
+        1772.0,
+        2024.0,
+        567.5
+      ],
+      "rotZ": 4.9
+    },
+    {
+      "base": "HospitalLights03StandDamagedUnlit",
+      "pos": [
+        1750,
+        2140,
+        567.5
+      ],
+      "rotZ": 1.8
+    },
+    {
+      "base": "OilCan01",
+      "pos": [
+        1751.1,
+        2077.0,
+        567.5
+      ],
+      "rotZ": 2.879
+    },
+    {
+      "base": "MakeshiftBattery01",
+      "pos": [
+        1750.3,
+        2087.5,
+        567.5
+      ],
+      "rotZ": 3.512
+    },
+    {
+      "base": "c_Gears_scrap",
+      "pos": [
+        1752.3,
+        2100.1,
+        567.5
+      ],
+      "rotZ": 5.082
+    },
+    {
+      "base": "EnamelBucket01_PreWar",
+      "pos": [
+        1766.8,
+        2111.7,
+        567.5
+      ],
+      "rotZ": 2.249
+    },
+    {
+      "base": "Clipboard01",
+      "pos": [
+        1750.6,
+        1954.5,
+        625.0
+      ],
+      "rotZ": 0.946
+    },
+    {
+      "base": "TowelBathClean01a",
+      "pos": [
+        1743.0,
+        1972.9,
+        625.0
+      ],
+      "rotZ": 2.476
+    },
+    {
+      "base": "TrashcanMetalOffice01",
+      "pos": [
+        1762.4,
+        2007.1,
+        567.5
+      ],
+      "rotZ": 4.015
+    },
+    {
+      "base": "Bloodpack",
+      "pos": [
+        1748.6,
+        2022.5,
+        597.0
+      ],
+      "rotZ": 4.644
+    },
+    {
+      "base": "Bloodpack",
+      "pos": [
+        1758.5,
+        2023.0,
+        594.5
+      ],
+      "rotZ": 5.799
+    },
+    {
+      "base": "Prewar_Cooler_Empty",
+      "pos": [
+        1749.0,
+        2062.0,
+        567.5
+      ],
+      "rotZ": 1.571
+    },
+    {
+      "base": "ChemistrySetBeaker02",
+      "pos": [
+        1754.0,
+        2058.0,
+        597.0
+      ],
+      "rotZ": 6.106
+    },
+    {
+      "base": "MilkBottleEmpty",
+      "pos": [
+        1753.1,
+        2065.6,
+        597.0
+      ],
+      "rotZ": 2.89
+    },
+    {
+      "base": "SurgicalTray01",
+      "pos": [
+        1750.9,
+        1943.5,
+        623.5
+      ],
+      "rotZ": 3.428
+    },
+    {
+      "base": "Scalpel",
+      "pos": [
+        1748.2,
+        1938.4,
+        625.0
+      ],
+      "rotZ": 5.183
+    },
+    {
+      "base": "Institute_Tweezers",
+      "pos": [
+        1742.1,
+        1932.5,
+        625.5
+      ],
+      "rotZ": 0.435
+    },
+    {
+      "base": "Bloodpack",
+      "pos": [
+        1745.5,
+        1934.6,
+        625.0
+      ],
+      "rotZ": 2.042
+    },
+    {
+      "base": "Stimpak",
+      "pos": [
+        1747.9,
+        1939.5,
+        625.0
+      ],
+      "rotZ": 1.287
+    },
+    {
+      "base": "Stimpak",
+      "pos": [
+        1751.5,
+        1978.5,
+        623.5
+      ],
+      "rotZ": 4.469
+    },
+    {
+      "base": "MedX",
+      "pos": [
+        1751.6,
+        1983.5,
+        623.5
+      ],
+      "rotZ": 2.694
+    },
+    {
+      "base": "RadAway",
+      "pos": [
+        1755.5,
+        1970.5,
+        623.5
+      ],
+      "rotZ": 0.463
+    },
+    {
+      "base": "WoodCrate01",
+      "pos": [
+        2034.1,
+        1912.4,
+        567.5
+      ],
+      "rotZ": 1.497
+    },
+    {
+      "base": "WoodCrate02",
+      "pos": [
+        2035.3,
+        1946.8,
+        567.5
+      ],
+      "rotZ": 2.854
+    },
+    {
+      "base": "WoodCrate01",
+      "pos": [
+        2036.9,
+        1932.0,
+        589.5
+      ],
+      "rotZ": 1.481
+    },
+    {
+      "base": "OilCan01",
+      "pos": [
+        2014.8,
+        1960.6,
+        567.5
+      ],
+      "rotZ": 0.62
+    },
+    {
+      "base": "c_Gears_scrap",
+      "pos": [
+        2012.9,
+        1911.1,
+        567.5
+      ],
+      "rotZ": 0.421
+    },
+    {
+      "base": "SensorModule",
+      "pos": [
+        2000.4,
+        1943.9,
+        567.5
+      ],
+      "rotZ": 1.491
+    },
+    {
+      "base": "DuctTape01",
+      "pos": [
+        2013.3,
+        1931.6,
+        569.5
+      ],
+      "rotZ": 4.201
+    },
+    {
+      "base": "MakeshiftBattery01",
+      "pos": [
+        2028.1,
+        1895.4,
+        567.5
+      ],
+      "rotZ": 0.119
+    },
+    {
+      "base": "HotPlate",
+      "pos": [
+        2047.2,
+        1937.8,
+        589.5
+      ],
+      "rotZ": 6.157
+    },
+    {
+      "base": "Loot_Toolbox",
+      "pos": [
+        2025.0,
+        1971.9,
+        567.5
+      ],
+      "rotZ": 0.603
+    },
+    {
+      "base": "Wrench03",
+      "pos": [
+        2030.1,
+        1963.4,
+        567.5
+      ],
+      "rotZ": 3.799
+    },
+    {
+      "base": "CigaretteCarton",
+      "pos": [
+        2043.8,
+        1960.9,
+        567.5
+      ],
+      "rotZ": 5.449
+    },
+    {
+      "base": "Handcuffs",
+      "pos": [
+        2005.1,
+        1920.7,
+        567.5
+      ],
+      "rotZ": 1.882
+    },
+    {
+      "base": "FireExtinguisher01",
+      "pos": [
+        2057.8,
+        1910.2,
+        567.5
+      ],
+      "rotZ": 1.871
+    },
+    {
+      "base": "Telephone01",
+      "pos": [
+        2348.3,
+        1884.5,
+        624.0
+      ],
+      "rotZ": 1.741
+    },
+    {
+      "base": "Clipboard_Prewar01",
+      "pos": [
+        2334.9,
+        1896.5,
+        624.0
+      ],
+      "rotZ": 3.676
+    },
+    {
+      "base": "FolderPapers01",
+      "pos": [
+        2334.4,
+        1902.4,
+        624.4
+      ],
+      "rotZ": 2.219
+    },
+    {
+      "base": "FolderPapers02",
+      "pos": [
+        2335.0,
+        1905.8,
+        624.8
+      ],
+      "rotZ": 4.096
+    },
+    {
+      "base": "CoffeeCup01clean",
+      "pos": [
+        2343.6,
+        1917.7,
+        624.0
+      ],
+      "rotZ": 1.329
+    },
+    {
+      "base": "PrewarDeskFanOffice01",
+      "pos": [
+        2348.9,
+        1943.9,
+        624.0
+      ],
+      "rotZ": 2.429
+    },
+    {
+      "base": "HighPoly_SurgicalJournal04",
+      "pos": [
+        2339.6,
+        1925.1,
+        624.0
+      ],
+      "rotZ": 2.309
+    },
+    {
+      "base": "HighPoly_SurgicalJournal06",
+      "pos": [
+        2337.1,
+        1926.9,
+        626.2
+      ],
+      "rotZ": 3.672
+    },
+    {
+      "base": "Pencil",
+      "pos": [
+        2340.0,
+        1898.1,
+        624.3
+      ],
+      "rotZ": 1.533
+    },
+    {
+      "base": "TrashcanMetalOffice01",
+      "pos": [
+        2319.2,
+        1862.4,
+        567.5
+      ],
+      "rotZ": 2.976
+    },
+    {
+      "base": "WoodCrate03",
+      "pos": [
+        2327.9,
+        1849.0,
+        567.5
+      ],
+      "rotZ": 4.61
+    },
+    {
+      "base": "OfficeBoxPapers02",
+      "pos": [
+        2326.9,
+        1852.0,
+        590.5
+      ],
+      "rotZ": 2.373
+    },
+    {
+      "base": "WaxCandle01",
+      "pos": [
+        1869.3,
+        2453.4,
+        567.5
+      ],
+      "rotZ": 0.736
+    },
+    {
+      "base": "WaxCandle02",
+      "pos": [
+        1876.5,
+        2445.1,
+        567.5
+      ],
+      "rotZ": 2.433
+    },
+    {
+      "base": "WaxCandle04",
+      "pos": [
+        1991.2,
+        2450.7,
+        567.5
+      ],
+      "rotZ": 2.609
+    },
+    {
+      "base": "OilLampOn",
+      "pos": [
+        1936.7,
+        2445.9,
+        624.0
+      ],
+      "rotZ": 3.311
+    },
+    {
+      "base": "defaultLightFire01NSFlicker",
+      "pos": [
+        1935.7,
+        2447.4,
+        644.0
+      ],
+      "rotZ": 0.0
+    },
+    {
+      "base": "PrewarBottleBourbon01",
+      "pos": [
+        1915.0,
+        2439.0,
+        624.0
+      ],
+      "rotZ": 0.393
+    },
+    {
+      "base": "BottleEmptyBourbon01",
+      "pos": [
+        1994.9,
+        2420.8,
+        567.5
+      ],
+      "rotZ": 3.972
+    },
+    {
+      "base": "FolderPapers01",
+      "pos": [
+        1752.7,
+        2424.0,
+        590.5
+      ],
+      "rotZ": 2.311
+    },
+    {
+      "base": "FolderPapers02",
+      "pos": [
+        1757.7,
+        2424.0,
+        590.5
+      ],
+      "rotZ": 5.233
+    },
+    {
+      "base": "OfficeBoxPapers03",
+      "pos": [
+        1744.1,
+        2386.6,
+        567.5
+      ],
+      "rotZ": 2.416
+    },
+    {
+      "base": "OfficeBoxPapers02",
+      "pos": [
+        1747.2,
+        2390.1,
+        590.5
+      ],
+      "rotZ": 1.857
+    },
+    {
+      "base": "Clipboard01",
+      "pos": [
+        1813.3,
+        2400.6,
+        567.5
+      ],
+      "rotZ": 3.338
+    },
+    {
+      "base": "TowelBathClean01b",
+      "pos": [
+        1875.7,
+        2383.2,
+        590.5
+      ],
+      "rotZ": 5.044
+    },
+    {
+      "base": "WoodCrate01",
+      "pos": [
+        1872.8,
+        2380.9,
+        567.5
+      ],
+      "rotZ": 4.484
+    },
+    {
+      "base": "MetalBucket",
+      "pos": [
+        2064.1,
+        2396.8,
+        567.5
+      ],
+      "rotZ": 2.718
+    },
+    {
+      "base": "Handcuffs",
+      "pos": [
+        1921.2,
+        2453.5,
+        624.4
+      ],
+      "rotZ": 3.19
+    },
+    {
+      "base": "Broom01",
+      "pos": [
+        1901.1,
+        1743.7,
+        607.5
+      ],
+      "rotZ": 2.936
+    },
+    {
+      "base": "Mop",
+      "pos": [
+        1910.2,
+        1740.0,
+        605.5
+      ],
+      "rotZ": 4.977
+    },
+    {
+      "base": "MetalBucket",
+      "pos": [
+        1892.4,
+        1731.9,
+        567.5
+      ],
+      "rotZ": 1.163
+    },
+    {
+      "base": "EnamelBucket01",
+      "pos": [
+        1887.4,
+        1741.1,
+        567.5
+      ],
+      "rotZ": 5.88
+    },
+    {
+      "base": "TowelBathClean01",
+      "pos": [
+        1904.1,
+        1729.7,
+        567.5
+      ],
+      "rotZ": 2.921
+    },
+    {
+      "base": "TrashCanMetal",
+      "pos": [
+        2088.0,
+        1744.0,
+        567.5
+      ],
+      "rotZ": 0.4
+    },
+    {
+      "base": "WoodCrate02",
+      "pos": [
+        1902.2,
+        1558.2,
+        567.5
+      ],
+      "rotZ": 0.351
+    },
+    {
+      "base": "WoodCrate01",
+      "pos": [
+        1903.9,
+        1560.9,
+        589.5
+      ],
+      "rotZ": 2.266
+    },
+    {
+      "base": "CrateLargeGreen",
+      "pos": [
+        1886.9,
+        1613.1,
+        567.5
+      ],
+      "rotZ": 4.944
+    },
+    {
+      "base": "OilCan01",
+      "pos": [
+        1841.5,
+        1586.2,
+        567.5
+      ],
+      "rotZ": 2.283
+    },
+    {
+      "base": "FolderPapers01",
+      "pos": [
+        1906.8,
+        1562.6,
+        612.0
+      ],
+      "rotZ": 5.272
+    },
+    {
+      "base": "WoodCrate03",
+      "pos": [
+        1889.9,
+        1600.6,
+        567.5
+      ],
+      "rotZ": 5.827
+    },
+    {
+      "base": "FireExtinguisher01",
+      "pos": [
+        1935.1,
+        1511.3,
+        567.5
+      ],
+      "rotZ": 2.102
+    },
+    {
+      "base": "MilkBottleEmpty",
+      "pos": [
+        1894.0,
+        1618.9,
+        567.5
+      ],
+      "rotZ": 3.266
+    },
+    {
+      "base": "WoodCrate01",
+      "pos": [
+        2334.1,
+        1561.9,
+        567.5
+      ],
+      "rotZ": 4.966
+    },
+    {
+      "base": "WoodCrate02",
+      "pos": [
+        2334.0,
+        1595.9,
+        567.5
+      ],
+      "rotZ": 0.791
+    },
+    {
+      "base": "WoodCrate01",
+      "pos": [
+        2333.6,
+        1576.7,
+        589.5
+      ],
+      "rotZ": 0.948
+    },
+    {
+      "base": "WoodCrate03",
+      "pos": [
+        2332.2,
+        1555.1,
+        567.5
+      ],
+      "rotZ": 4.935
+    },
+    {
+      "base": "CrateLargeVaultTec01Clean",
+      "pos": [
+        2298.8,
+        1554.7,
+        567.5
+      ],
+      "rotZ": 0.67
+    },
+    {
+      "base": "WoodCrate02",
+      "pos": [
+        2329.3,
+        1642.5,
+        567.5
+      ],
+      "rotZ": 0.06
+    },
+    {
+      "base": "WoodCrate01",
+      "pos": [
+        2326.9,
+        1640.0,
+        589.5
+      ],
+      "rotZ": 1.382
+    },
+    {
+      "base": "OfficeBoxPapers01",
+      "pos": [
+        2332.4,
+        1600.8,
+        567.5
+      ],
+      "rotZ": 1.078
+    },
+    {
+      "base": "OfficeBoxPapers03",
+      "pos": [
+        2332.8,
+        1602.9,
+        590.5
+      ],
+      "rotZ": 4.962
+    },
+    {
+      "base": "OilCan01",
+      "pos": [
+        2321.1,
+        1578.0,
+        567.5
+      ],
+      "rotZ": 2.581
+    },
+    {
+      "base": "OilCan01_PreWar",
+      "pos": [
+        2323.8,
+        1570.8,
+        567.5
+      ],
+      "rotZ": 5.915
+    },
+    {
+      "base": "MetalBucket_PreWar",
+      "pos": [
+        2268.0,
+        1572.3,
+        567.5
+      ],
+      "rotZ": 4.595
+    },
+    {
+      "base": "WoodCrate03",
+      "pos": [
+        2238.2,
+        1640.5,
+        567.5
+      ],
+      "rotZ": 2.63
+    },
+    {
+      "base": "Loot_Prewar_ToolBox",
+      "pos": [
+        2244.4,
+        1643.8,
+        589.5
+      ],
+      "rotZ": 2.183
+    },
+    {
+      "base": "DuctTapeMilitary",
+      "pos": [
+        2298.6,
+        1600.6,
+        569.5
+      ],
+      "rotZ": 3.425
+    },
+    {
+      "base": "WoodCrate01",
+      "pos": [
+        2079.7,
+        1783.8,
+        567.5
+      ],
+      "rotZ": 5.045
+    },
+    {
+      "base": "OfficeBoxPapers02",
+      "pos": [
+        2082.4,
+        1785.9,
+        590.0
+      ],
+      "rotZ": 4.647
+    },
+    {
+      "base": "OilCan01",
+      "pos": [
+        2125.6,
+        1797.3,
+        567.5
+      ],
+      "rotZ": 3.277
+    },
+    {
+      "base": "WoodCrate02",
+      "pos": [
+        1787.2,
+        1779.6,
+        567.5
+      ],
+      "rotZ": 4.01
+    },
+    {
+      "base": "MilkBottleEmpty",
+      "pos": [
+        1787.9,
+        1827.8,
+        567.5
+      ],
+      "rotZ": 4.308
+    },
+    {
+      "base": "BeerBottleEmpty01",
+      "pos": [
+        1784.3,
+        1834.8,
+        567.5
+      ],
+      "rotZ": 2.299
+    },
+    {
+      "base": "WoodCrate03",
+      "pos": [
+        1786.4,
+        2211.1,
+        567.5
+      ],
+      "rotZ": 1.824
+    },
+    {
+      "base": "OfficeBoxPapers03",
+      "pos": [
+        1786.2,
+        2211.0,
+        590.5
+      ],
+      "rotZ": 1.912
+    },
+    {
+      "base": "Clipboard01",
+      "pos": [
+        1834.4,
+        2198.1,
+        567.5
+      ],
+      "rotZ": 1.278
+    },
+    {
+      "base": "EnamelBucket01",
+      "pos": [
+        1840.5,
+        1794.2,
+        567.5
+      ],
+      "rotZ": 2.919
+    },
+    {
+      "base": "c_Gears_scrap",
+      "pos": [
+        2096.5,
+        1832.4,
+        567.5
+      ],
+      "rotZ": 3.356
+    },
+    {
+      "base": "MakeshiftBattery01",
+      "pos": [
+        2122.0,
+        1822.8,
+        567.5
+      ],
+      "rotZ": 4.815
+    },
+    {
+      "base": "Loot_Prewar_Medkit_Wall",
+      "pos": [
+        1754.0,
+        2100.0,
+        650.0
+      ],
+      "rotZ": 1.571
+    },
+    {
+      "base": "WallEmergencyLight01",
+      "pos": [
+        2332.0,
+        1700.0,
+        711.5
+      ],
+      "rotZ": 4.712
+    },
+    {
+      "base": "Beaker",
+      "pos": [
+        2152.5,
+        2153.2,
+        624.0
+      ],
+      "rotZ": 4.576
+    },
+    {
+      "base": "Beaker02",
+      "pos": [
+        2143.1,
+        2123.6,
+        624.0
+      ],
+      "rotZ": 5.752
+    },
+    {
+      "base": "ChemistrySetBeaker01",
+      "pos": [
+        2159.3,
+        2139.4,
+        624.0
+      ],
+      "rotZ": 2.351
+    },
+    {
+      "base": "WoodTtubeRack",
+      "pos": [
+        2149.2,
+        2147.1,
+        624.0
+      ],
+      "rotZ": 0.969
+    },
+    {
+      "base": "LabBeaker",
+      "pos": [
+        2155.5,
+        2131.3,
+        624.0
+      ],
+      "rotZ": 3.533
+    },
+    {
+      "base": "InstituteMedkit01",
+      "pos": [
+        2140.0,
+        2141.2,
+        624.0
+      ],
+      "rotZ": 3.248
+    },
+    {
+      "base": "Bloodpack",
+      "pos": [
+        2162.3,
+        2122.3,
+        624.0
+      ],
+      "rotZ": 2.839
+    },
+    {
+      "base": "WoodCrate02",
+      "pos": [
+        2322.0,
+        2140.0,
+        567.5
+      ],
+      "rotZ": 0.1
+    },
+    {
+      "base": "CoffeeCup01",
+      "pos": [
+        1925.6,
+        2437.0,
+        624.0
+      ],
+      "rotZ": 1.314
+    },
+    {
+      "base": "BeerBottleEmpty01",
+      "pos": [
+        2008.5,
+        2460.0,
+        567.5
+      ],
+      "rotZ": 2.906
+    },
+    {
+      "base": "BottleEmptyVodka01",
+      "pos": [
+        1754.6,
+        2451.6,
+        567.5
+      ],
+      "rotZ": 0.397
+    },
+    {
+      "base": "Teapot",
+      "pos": [
+        2315.8,
+        2134.6,
+        590.0
+      ],
+      "rotZ": 3.643
+    },
+    {
+      "base": "Typewriter",
+      "pos": [
+        2323.3,
+        2142.8,
+        590.0
+      ],
+      "rotZ": 5.688
+    },
+    {
+      "base": "FolderPapers02",
+      "pos": [
+        2328.4,
+        2148.9,
+        567.8
+      ],
+      "rotZ": 2.805
+    },
+    {
+      "base": "WoodCrate01",
+      "pos": [
+        1753.4,
+        1859.7,
+        567.5
+      ],
+      "rotZ": 2.315
+    },
+    {
+      "base": "WoodCrate01",
+      "pos": [
+        1753.6,
+        1899.0,
+        567.5
+      ],
+      "rotZ": 4.725
+    },
+    {
+      "base": "WoodCrate01",
+      "pos": [
+        1750.5,
+        1946.5,
+        567.5
+      ],
+      "rotZ": 3.908
+    },
+    {
+      "base": "WoodCrate01",
+      "pos": [
+        1754.3,
+        2238.7,
+        567.5
+      ],
+      "rotZ": 6.237
+    },
+    {
+      "base": "WoodCrate01",
+      "pos": [
+        1750.6,
+        2281.2,
+        567.5
+      ],
+      "rotZ": 5.578
+    },
+    {
+      "base": "WoodCrate02",
+      "pos": [
+        1754.6,
+        1863.4,
+        589.5
+      ],
+      "rotZ": 5.863
+    },
+    {
+      "base": "OfficeBoxPapers03",
+      "pos": [
+        1754.0,
+        1902.9,
+        589.5
+      ],
+      "rotZ": 2.124
+    },
+    {
+      "base": "OilCan01",
+      "pos": [
+        1750.5,
+        1945.6,
+        567.5
+      ],
+      "rotZ": 4.183
+    },
+    {
+      "base": "MetalBucket",
+      "pos": [
+        1748.3,
+        2244.0,
+        567.5
+      ],
+      "rotZ": 5.115
+    },
+    {
+      "base": "WoodCrate03",
+      "pos": [
+        1751.9,
+        2284.5,
+        589.5
+      ],
+      "rotZ": 0.214
+    },
+    {
+      "base": "WoodCrate01",
+      "pos": [
+        1754.7,
+        2576.5,
+        567.5
+      ],
+      "rotZ": 0.479
+    },
+    {
+      "base": "WoodCrate01",
+      "pos": [
+        1760.3,
+        2574.6,
+        567.5
+      ],
+      "rotZ": 4.866
+    },
+    {
+      "base": "WoodCrate01",
+      "pos": [
+        1850.0,
+        2576.3,
+        567.5
+      ],
+      "rotZ": 1.055
+    },
+    {
+      "base": "WoodCrate01",
+      "pos": [
+        2099.6,
+        2574.3,
+        567.5
+      ],
+      "rotZ": 3.545
+    },
+    {
+      "base": "WoodCrate01",
+      "pos": [
+        2157.5,
+        2378.5,
+        567.5
+      ],
+      "rotZ": 5.975
+    },
+    {
+      "base": "WoodCrate01",
+      "pos": [
+        2241.5,
+        2371.5,
+        567.5
+      ],
+      "rotZ": 5.566
+    },
+    {
+      "base": "WoodCrate01",
+      "pos": [
+        2302.6,
+        2376.4,
+        567.5
+      ],
+      "rotZ": 6.194
+    },
+    {
+      "base": "OfficeBoxPapers01",
+      "pos": [
+        1751.9,
+        2575.7,
+        589.5
+      ],
+      "rotZ": 5.237
+    },
+    {
+      "base": "OfficeBoxPapers02",
+      "pos": [
+        1759.2,
+        2580.9,
+        589.5
+      ],
+      "rotZ": 3.684
+    },
+    {
+      "base": "OilCan01_PreWar",
+      "pos": [
+        1852.6,
+        2576.6,
+        567.5
+      ],
+      "rotZ": 0.067
+    },
+    {
+      "base": "WoodCrate01",
+      "pos": [
+        2105.2,
+        2375.8,
+        589.5
+      ],
+      "rotZ": 4.033
+    },
+    {
+      "base": "Loot_Prewar_ToolBox",
+      "pos": [
+        2163.3,
+        2372.7,
+        589.5
+      ],
+      "rotZ": 3.126
+    },
+    {
+      "base": "MetalBucket_PreWar",
+      "pos": [
+        2243.4,
+        2369.6,
+        589.5
+      ],
+      "rotZ": 2.155
+    },
+    {
+      "base": "OfficeBoxPapers03",
+      "pos": [
+        2303.1,
+        2375.9,
+        589.5
+      ],
+      "rotZ": 2.24
+    },
+    {
+      "base": "WoodCrate01",
+      "pos": [
+        2334.8,
+        1800.0,
+        567.5
+      ],
+      "rotZ": 3.834
+    },
+    {
+      "base": "WoodCrate01",
+      "pos": [
+        2328.7,
+        1861.9,
+        567.5
+      ],
+      "rotZ": 1.799
+    },
+    {
+      "base": "WoodCrate03",
+      "pos": [
+        2334.5,
+        2242.6,
+        567.5
+      ],
+      "rotZ": 4.379
+    },
+    {
+      "base": "WoodCrate03",
+      "pos": [
+        2328.1,
+        2298.7,
+        567.5
+      ],
+      "rotZ": 4.152
+    },
+    {
+      "base": "WoodCrate03",
+      "pos": [
+        2333.9,
+        2382.4,
+        567.5
+      ],
+      "rotZ": 5.778
+    },
+    {
+      "base": "WoodCrate03",
+      "pos": [
+        2328.9,
+        2369.9,
+        567.5
+      ],
+      "rotZ": 2.249
+    },
+    {
+      "base": "WoodCrate02",
+      "pos": [
+        2327.2,
+        1802.0,
+        589.5
+      ],
+      "rotZ": 2.039
+    },
+    {
+      "base": "OilCan01",
+      "pos": [
+        2334.5,
+        1862.6,
+        567.5
+      ],
+      "rotZ": 2.678
+    },
+    {
+      "base": "OfficeBoxPapers02",
+      "pos": [
+        2334.6,
+        2244.6,
+        589.5
+      ],
+      "rotZ": 3.57
+    },
+    {
+      "base": "BeerBottleEmpty01",
+      "pos": [
+        2330.5,
+        2307.0,
+        567.5
+      ],
+      "rotZ": 0.45
+    },
+    {
+      "base": "MilkBottleEmpty",
+      "pos": [
+        2330.4,
+        2386.6,
+        567.5
+      ],
+      "rotZ": 3.78
+    },
+    {
+      "base": "WoodCrate01",
+      "pos": [
+        2329.8,
+        2370.8,
+        589.5
+      ],
+      "rotZ": 5.447
+    },
+    {
+      "base": "Bloodpack",
+      "pos": [
+        1750.3,
+        2061.4,
+        602.0
+      ],
+      "rotZ": 3.543
+    },
+    {
+      "base": "Bloodpack",
+      "pos": [
+        1749.1,
+        2058.6,
+        597.0
+      ],
+      "rotZ": 2.36
+    },
+    {
+      "base": "SurgicalTray01",
+      "pos": [
+        2144.8,
+        2135.0,
+        624.0
+      ],
+      "rotZ": 0.887
+    },
+    {
+      "base": "TowelBathClean01a",
+      "pos": [
+        2185.2,
+        1706.0,
+        713.5
+      ],
+      "rotZ": 2.266
+    },
+    {
+      "base": "TowelBathClean01",
+      "pos": [
+        2341.5,
+        1706.7,
+        713.5
+      ],
+      "rotZ": 5.177
+    },
+    {
+      "base": "WaxCandle05",
+      "pos": [
+        1994.4,
+        2443.9,
+        567.5
+      ],
+      "rotZ": 0.402
+    },
+    {
+      "base": "WaxCandle03",
+      "pos": [
+        1862.9,
+        2459.5,
+        567.5
+      ],
+      "rotZ": 5.473
+    },
+    {
+      "base": "HighPoly_SurgicalJournal07",
+      "pos": [
+        2253.9,
+        1706.3,
+        713.5
+      ],
+      "rotZ": 0.436
+    },
+    {
+      "base": "HighPoly_SurgicalJournal08",
+      "pos": [
+        2231.0,
+        1706.2,
+        713.5
+      ],
+      "rotZ": 4.145
+    },
+    {
+      "base": "HighPoly_SurgicalJournal09",
+      "pos": [
+        2209.0,
+        1706.0,
+        713.5
+      ],
+      "rotZ": 1.208
+    },
+    {
+      "base": "CigarettePack",
+      "pos": [
+        2346.0,
+        1908.9,
+        624.0
+      ],
+      "rotZ": 3.436
+    },
+    {
+      "base": "Clipboard_Prewar01",
+      "pos": [
+        1923.6,
+        2443.3,
+        624.0
+      ],
+      "rotZ": 5.377
+    },
+    {
+      "base": "FolderPapers01",
+      "pos": [
+        2149.0,
+        2126.5,
+        623.5
+      ],
+      "rotZ": 1.564
+    },
+    {
+      "base": "PlayerHouse_Ruin_CoatRack01",
+      "pos": [
+        1888.0,
+        1592.0,
+        567.5
+      ],
+      "rotZ": 0.6
+    },
+    {
+      "base": "Mirror02",
+      "pos": [
+        1750.0,
+        2038.0,
+        567.5
+      ],
+      "rotZ": 1.571
+    },
+    {
+      "base": "MetalTable02",
+      "pos": [
+        1750.0,
+        2038.0,
+        567.5
+      ],
+      "rotZ": 0.0
+    },
+    {
+      "base": "SurgicalTray01",
+      "pos": [
+        1750.0,
+        2030.0,
+        624.0
+      ],
+      "rotZ": 0.0
+    },
+    {
+      "base": "Scalpel",
+      "pos": [
+        1751.0,
+        2030.0,
+        625.0
+      ],
+      "rotZ": 1.571
+    },
+    {
+      "base": "Institute_Tweezers",
+      "pos": [
+        1750.0,
+        2030.0,
+        625.0
+      ],
+      "rotZ": 1.571
+    },
+    {
+      "base": "SurgicalScalpel",
+      "pos": [
+        1749.0,
+        2030.0,
+        625.0
+      ],
+      "rotZ": 1.571
+    },
+    {
+      "base": "SensorModule",
+      "pos": [
+        1750.0,
+        2046.0,
+        624.5
+      ],
+      "rotZ": 1.571
+    },
+    {
+      "base": "c_Gears_scrap",
+      "pos": [
+        1749.0,
+        2046.0,
+        624.5
+      ],
+      "rotZ": 1.571
+    },
+    {
+      "base": "BldgShellFloorConcrete01Full",
+      "pos": [
+        1977.8,
+        2112.0,
+        759.5
+      ],
+      "rotZ": 0.0
+    },
+    {
+      "base": "BldgShellConcreteBasementWall01",
+      "pos": [
+        2331.2,
+        1600.0,
+        759.5
+      ],
+      "rotZ": 1.571
+    },
+    {
+      "base": "BldgShellConcreteBasementWall01",
+      "pos": [
+        2331.2,
+        1856.0,
+        759.5
+      ],
+      "rotZ": 1.571
+    },
+    {
+      "base": "BldgShellConcreteBasementWall01",
+      "pos": [
+        2331.2,
+        2112.0,
+        759.5
+      ],
+      "rotZ": 1.571
+    },
+    {
+      "base": "BldgShellConcreteBasementWall01",
+      "pos": [
+        2331.2,
+        2368.0,
+        759.5
+      ],
+      "rotZ": 1.571
+    },
+    {
+      "base": "CartDiagnosticGarage01",
+      "pos": [
+        1905.0,
+        2205.0,
+        567.5
+      ],
+      "rotZ": 1.9
+    },
+    {
+      "base": "CartWheeledGarage01",
+      "pos": [
+        2060.0,
+        1800.0,
+        567.5
+      ],
+      "rotZ": 4.2
+    },
+    {
+      "base": "FlatbedCart_Small",
+      "pos": [
+        2210.0,
+        1960.0,
+        567.5
+      ],
+      "rotZ": 2.6
+    },
+    {
+      "base": "V111ScannerCables01",
+      "pos": [
+        1830.0,
+        2098.0,
+        567.5
+      ],
+      "rotZ": 1.3
+    },
+    {
+      "base": "V111ScannerCables01",
+      "pos": [
+        1852.0,
+        2030.0,
+        567.5
+      ],
+      "rotZ": 4.5
+    },
+    {
+      "base": "WoodCrate02",
+      "pos": [
+        1940.0,
+        1860.0,
+        567.5
+      ],
+      "rotZ": 0.7
+    },
+    {
+      "base": "OfficeBoxPapers03",
+      "pos": [
+        1942.0,
+        1862.0,
+        590.0
+      ],
+      "rotZ": 1.9
+    },
+    {
+      "base": "MetalBucket",
+      "pos": [
+        2010.0,
+        2240.0,
+        567.5
+      ],
+      "rotZ": 2.2
+    },
+    {
+      "base": "TrashcanMetalOffice01",
+      "pos": [
+        2150.0,
+        1840.0,
+        567.5
+      ],
+      "rotZ": 0.9
+    },
+    {
+      "base": "Gardenhose01",
+      "pos": [
+        1948.0,
+        1752.0,
+        567.5
+      ],
+      "rotZ": 2.3
+    },
+    {
+      "base": "OxygenTank",
+      "pos": [
+        1874.0,
+        2112.0,
+        567.5
+      ],
+      "rotZ": 0.0
+    },
+    {
+      "base": "FloorJackGarage01",
+      "pos": [
+        2068.0,
+        1836.0,
+        567.5
+      ],
+      "rotZ": 1.2
+    },
+    {
+      "base": "CartDiagnosticGarage02",
+      "pos": [
+        1756.0,
+        1902.0,
+        567.5
+      ],
+      "rotZ": 2.4
+    },
+    {
+      "base": "ConsolePanB11On",
+      "pos": [
+        2338.0,
+        1848.0,
+        567.5
+      ],
+      "rotZ": 4.9
+    },
+    {
+      "base": "TowelBathClean01",
+      "pos": [
+        1737.0,
+        1970.0,
+        625.0
+      ],
+      "rotZ": 1.0
+    },
+    {
+      "base": "PlayerHouse_BathroomSoapTray01",
+      "pos": [
+        2146.0,
+        2140.0,
+        624.0
+      ],
+      "rotZ": 0.3
+    },
+    {
+      "base": "DN015_TestTubeRackStatic",
+      "pos": [
+        2244.0,
+        1702.0,
+        713.5
+      ],
+      "rotZ": 1.1
+    },
+    {
+      "base": "V111ScannerCables01",
+      "pos": [
+        1762.0,
+        2142.0,
+        567.5
+      ],
+      "rotZ": 2.8
+    },
+    {
+      "base": "V111ScannerCables01",
+      "pos": [
+        1752.0,
+        2008.0,
+        567.5
+      ],
+      "rotZ": 0.7
+    },
+    {
+      "base": "Gardenhose01",
+      "pos": [
+        2096.0,
+        1712.0,
+        567.5
+      ],
+      "rotZ": 1.1
+    },
+    {
+      "base": "TowelBathClean01a",
+      "pos": [
+        1682.0,
+        2162.0,
+        601.0
+      ],
+      "rotZ": 2.0
+    },
+    {
+      "base": "TowelBathClean01b",
+      "pos": [
+        1872.0,
+        2096.0,
+        567.5
+      ],
+      "rotZ": 4.4
+    }
+  ],
+  "doors": {
+    "base": "DiamondDoor02",
+    "clinic": {
+      "pos": [
+        1977.8,
+        1496.0,
+        567.5
+      ],
+      "rotZ": 0.0,
+      "landing": [
+        1977.8,
+        1580.0,
+        567.5,
+        0.0
+      ]
+    },
+    "dc": {
+      "cell": "Fallout4.esm|198F1",
+      "pos": [
+        1380.0,
+        -935.6,
+        -137.5
+      ],
+      "rotZ": 0.0,
+      "landing": [
+        1380.0,
+        -880.0,
+        -137.5,
+        0.0
+      ]
+    }
+  },
+  "phase2": {
+    "note": "generated only with --phase2. Varga's day: 0-6 bed, 6-10 office chair, 10-14 Diamond City market, 14-24 surgical station. Inside the clinic she WALKS the navmesh between stations (packages conditioned GetInCell). The clinic door has no NAVI link, so crossing it is the DLL's off-screen mover only ([Clinic] bSchedule, OFF by default). Rationale and quality target: clinic/PHASE2-QUALITY.md.",
+    "vargaRefEdid": "CW_RipperdocRef_diamondcity",
+    "vargaNpcEdid": "CW_Ripperdoc_diamondcity",
+    "varga": {
+      "pos": [
+        1800.0,
+        2065.0,
+        567.5
+      ],
+      "rotZ": 1.571
+    },
+    "chair": {
+      "baseEdid": "CW_RipperdocChair_diamondcity",
+      "pos": [
+        1876.0,
+        2020.0,
+        567.5
+      ],
+      "rotZ": 5.5
+    },
+    "bed": {
+      "pos": [
+        1815.0,
+        2360.0,
+        567.5
+      ],
+      "rotZ": 3.1416
+    },
+    "globals": [
+      {
+        "edid": "CW_ClinicSceneActive",
+        "note": "INSTALL SCENE: 1 while the chair install scene runs. The DLL WRITES it (1 at the scene's commit beat, then evp on her; 0 at the scene's end, on every abort and on every load) and never reads it. Wired by [Scene] sSceneGlobal_diamondcity=Cyberware - Clinic.esp|<local id>.",
+        "value": 0
+      }
+    ],
+    "packages": [
+      {
+        "edid": "CW_ClinicStepIn",
+        "note": "INSTALL SCENE step-in, FIRST in her list so it beats every clock package: while CW_ClinicSceneActive == 1 and she is in the clinic she walks to CW_ClinicSurgeonMark and holds there, facing its heading (Travel template, 'Ignore marker orientation' off). Donor DefaultStayAtEditorLocation (Travel, no conditions, soft radius on, radius 0): vanilla's generic stand-here package. No hour window: the global gates it. cw_clinic.cpp's nudge leaves her on it while the global is 1 and evaluates her back to her clock package once the scene clears it.",
+        "copyOf": "Fallout4.esm|003641",
+        "condition": "inClinic",
+        "globalIs": [
+          "CW_ClinicSceneActive",
+          1
+        ],
+        "nearRef": "CW_ClinicSurgeonMark"
+      },
+      {
+        "edid": "CW_ClinicSleep0to6",
+        "note": "P16: the window is a GameHour condition, not a PSDT schedule. In P15 the scheduled clinic packages never won a pick in the clinic (a fresh pick at 15:00 chose the hold over the shop, which differed from it only in its schedule). Exactly one clinic package passes at any hour.",
+        "copyOf": "Fallout4.esm|002F77",
+        "hours": [
+          null,
+          6
+        ],
+        "condition": "inClinic",
+        "nearRef": "CW_ClinicSandboxAnchor",
+        "nearRefNote": "CRASH FIX A: was CW_ClinicChair, which is 15.1 u off the navmesh and is what the pathing crash searched against. Radius unchanged."
+      },
+      {
+        "edid": "CW_ClinicOffice6to10",
+        "note": "P16: the window is a GameHour condition, not a PSDT schedule. In P15 the scheduled clinic packages never won a pick in the clinic (a fresh pick at 15:00 chose the hold over the shop, which differed from it only in its schedule). Exactly one clinic package passes at any hour.",
+        "copyOf": "Fallout4.esm|1C4E73",
+        "hours": [
+          6,
+          10
+        ],
+        "condition": "inClinic"
+      },
+      {
+        "edid": "CW_ClinicShop14to24",
+        "note": "P16: the window is a GameHour condition, not a PSDT schedule. In P15 the scheduled clinic packages never won a pick in the clinic (a fresh pick at 15:00 chose the hold over the shop, which differed from it only in its schedule). Exactly one clinic package passes at any hour. Donor: DefaultSandboxCurrentLocation, the same as the hold that did run in P15 (was DefaultSandboxEditorLocation; nearRef sets the location either way).",
+        "copyOf": "Fallout4.esm|089605",
+        "hours": [
+          14,
+          null
+        ],
+        "condition": "inClinic",
+        "radius": 150,
+        "nearRef": "CW_ClinicSandboxAnchor",
+        "nearRefNote": "CRASH FIX A: was CW_ClinicChair, which is 15.1 u off the navmesh and is what the pathing crash searched against. Radius unchanged."
+      },
+      {
+        "edid": "CW_ClinicWalk10to14",
+        "note": "P15: GetInCell clinic == 0. While the mover waits to take her out (player in the clinic at 10-14) CW_ClinicIndoorHold keeps her by the chair instead of this 1100 u sandbox roaming the room.",
+        "copyOf": "Fallout4.esm|089605",
+        "scheduleHour": 10,
+        "scheduleDurationMinutes": 240,
+        "condition": "notInClinic",
+        "radius": 1100
+      },
+      {
+        "edid": "CW_ClinicIndoorHold",
+        "note": "P15 belt and braces (the lead): indoor last resort. If a schedule package ever fails to start in the clinic she idles within 150 u of the chair instead of roaming the room. Never wanted by the schedule; the DLL nudge evaluates her out of it. P16: windowed to 10-14 (in the clinic while due in the market, the mover waiting), so she can never sit on a still-valid hold before 10:00 or past 14:00.",
+        "copyOf": "Fallout4.esm|089605",
+        "hours": [
+          10,
+          14
+        ],
+        "condition": "inClinic",
+        "radius": 150,
+        "nearRef": "CW_ClinicSandboxAnchor",
+        "nearRefNote": "CRASH FIX A: was CW_ClinicChair, which is 15.1 u off the navmesh and is what the pathing crash searched against. Radius unchanged."
+      },
+      {
+        "edid": "CW_ClinicOutside",
+        "note": "The outdoor fallback (market outside 10-14). P15: GetInCell clinic == 0, so its radius-1100 sandbox can no longer run in the room.",
+        "copyOf": "Fallout4.esm|089605",
+        "condition": "notInClinic",
+        "radius": 1100
+      }
+    ],
+    "marketAnchor": {
+      "note": "DC market plaza by Power Noodles, DiamondCityOrigin floor z -1569 (stool refs); the native mover teleports her here off-screen for 10:00-14:00 and back; CW_ClinicWalk10to14 sandboxes her CURRENT location, so no package location editing is needed.",
+      "worldspaceCellEdid": "DiamondCityOrigin",
+      "base": "XMarkerHeading",
+      "pos": [
+        2250.0,
+        1500.0,
+        -1569.0
+      ],
+      "rotZ": 3.5
+    },
+    "officeSeatEdid": "CW_ClinicOfficeChair",
+    "patientSeat": {
+      "note": "INSTALL SCENE: the furniture the player is put into for the install, co-located with the CP surgical chair STAT (cpProps surgical_chair_b, nobody can sit in a STAT). Copy of NPCMemoryLounger01 (reclined; AnimFurnMemoryLounge, no actor gate) with its keywords and entry points, VMAD stripped, model swapped for the vanilla invisible marker (precedent NPCMutantBodyExamine 1B1F5B). Pose offset to the pads: from the scene stream's runtime nudge, baked here.",
+      "baseEdid": "CW_ClinicPatientSeatFurn",
+      "refEdid": "CW_ClinicPatientSeat",
+      "copyOf": "Fallout4.esm|0CA06D",
+      "model": "Markers\\InvisibleGeneric01.nif",
+      "markerModel": "Furniture\\MemoryLounge\\MemoryLounger01.nif",
+      "markerModelNote": "XMRK. SCN-T0's cause (docs/integration/SEAT-XMRK-CAUSE.md): an invisible MODL carries no markers and no behaviour graph, so a FURN that swaps one in has to name a marker model, and the copy did not. 201 of the 207 invisible-model FURN in Fallout4.esm carry XMRK, the cited precedent included (NPCMutantBodyExamine 1B1F5B -> Markers\\MarkerNPCMutantBodyExamine.nif), and vanilla's own invisible PLAYER-scene furniture carries it with the furniture's behaviour graph inside the marker mesh (CryoPodSceneFurniture 0446F6 -> Markers\\MarkerCryoPodScene.nif -> Furniture\\CryoPod\\CryoPod01.hkx). This value is the donor's own mesh: it restores exactly what the model swap removed (the lounger's markers, GenericFurniture.hkx and its Enter/Exit keys) with no new asset and no id change. UNPROVEN IN GAME until a boot prints 'player sitting 1' with a time; if XMRK turns out to render, or a full furniture mesh is refused there, the fallback is the vanilla-exact reclined pairing in that doc (MQ202IrmaSit01 108F58: XMRK Markers\\MarkerMemoryDenChaiseLoungeSit.nif + AnimFurnMemoryDenChaiseLounge), which needs 2 ids and the the lead's confirm.",
+      "name": "",
+      "pos": [
+        1835.0,
+        2065.0,
+        567.5
+      ],
+      "rotZ": 1.571
+    },
+    "patientSeatB": {
+      "note": "PROBE SEAT, CANDIDATE B - DELETE THIS WHOLE ENTRY once one boot has decided between it and patientSeat (docs/integration/SEAT-XMRK-CAUSE.md); its two lock ids then retire by themselves and are never reused. It exists so a single boot can test both record shapes against the same positive control (the office chair, which seated at 3565 ms on boot b3). Candidate B is vanilla's own INVISIBLE-capable RECLINED pairing, copied whole from MQ202IrmaSit01 (108F58, the Memory Den chaise sit) whose FNPR set is 01000d00 x3, identical to the donor's: it already carries XMRK Markers\\MarkerMemoryDenChaiseLoungeSit.nif, so overriding the model is the only change and it needs no markerModel field and no new asset. Its keyword set is the donor's lone AnimFurnMemoryDenChaiseLounge, without the player-scene keywords the real seat carries - fine for the FUNCTIONAL question (does this shape seat a player at all) and NOT a shippable seat as it stands. QD-B grades T0 on patientSeat only; if only B seats, SCN-T0 stays a FUNCTIONAL FAIL on that build and B's sit is evidence for the mechanism alone.",
+      "npcNote": "QD-B asked whether Varga's packages could take this furniture and leave her station, which would void the clinic capture rows. Two independent reasons they cannot, and a build-time check so it stays that way. (1) KEYWORDS: Fallout4.esm has exactly two furniture-class keywords, FurnitureClassRelaxation and FurnitureClassWork, and 260 of its 598 FURN carry one; MQ202IrmaSit01 carries NEITHER - its only keyword is AnimFurnMemoryDenChaiseLounge, which puts it in the 76-record 'AnimFurn only' class of package-targeted props, the same shape as CryoPodSceneFurniture that no NPC sandboxes into. An NPC idling picks furniture by furniture class; B advertises none. (2) DISTANCE: her only two packages that can run inside the cell are sandboxes of radius 150 around CW_ClinicChair (CW_ClinicShop14to24, which is the one live at T0's hour 15, and CW_ClinicIndoorHold); the radius-1100 ones are conditioned GetInCell clinic == 0. B sits 264 units from that chair, outside both radii with a 114-unit margin, and 307 units from the real seat. verify_clinic.py now asserts that margin, so a later pos edit cannot quietly move it into her reach. REPORTED SEPARATELY, because it is the reverse of this and NOT about B: the SHIPPED seat (patientSeat, a copy of NPCMemoryLounger01) DOES carry FurnitureClassRelaxation and sits 61 units from that chair, inside her sandbox radius. No capture shows her using it, so that is a lead and not a finding, but the sandbox exposure QD-B is worried about belongs to the primary seat rather than to this probe.",
+      "baseEdid": "CW_ClinicPatientSeatFurnB",
+      "refEdid": "CW_ClinicPatientSeatB",
+      "copyOf": "Fallout4.esm|108F58",
+      "model": "Markers\\InvisibleGeneric01.nif",
+      "name": "",
+      "pos": [
+        2140.0,
+        2030.0,
+        567.5
+      ],
+      "rotZ": 1.571,
+      "idNote": "Ids A54/A55, pinned in clinic.lock.json rather than left to the generator's next-free scan. A52 and A53 are NOT free: a union of clinic.lock.json across all 261 fetchable refs of this repo (7 distinct blobs of that file, 596 ids) shows A52 = CW_ClinicFaceFill and A53 = CW_ClinicFaceFill_Ref on an unmerged lighting branch. The generator assigns the lowest id its own lock does not know, so without this pin it would have handed these two records A52/A53 and collided on merge. The lock's own Save() retires an unused id and never reassigns one, so pinning here is enough."
+    },
+    "surgeonMark": {
+      "note": "INSTALL SCENE: where Varga stands for the install, at the patient's shoulder (about 1835,2010 with the chair's head end to the south), facing it. The closest clinic navmesh spot to the shoulder with 20 u to the mesh edge; directly beside the shoulder the mesh is cut by the chair and stool. Heading 148 deg.",
+      "refEdid": "CW_ClinicSurgeonMark",
+      "base": "XMarkerHeading",
+      "pos": [
+        1810.0,
+        2050.0,
+        567.5
+      ],
+      "rotZ": 2.583
+    },
+    "lanes": [
+      {
+        "name": "station-bed",
+        "from": [
+          1800,
+          2065
+        ],
+        "to": [
+          1876,
+          2360
+        ]
+      },
+      {
+        "name": "station-desk",
+        "from": [
+          1800,
+          2065
+        ],
+        "to": [
+          2240,
+          1900
+        ]
+      },
+      {
+        "name": "bed-desk",
+        "from": [
+          1876,
+          2360
+        ],
+        "to": [
+          2240,
+          1900
+        ]
+      }
+    ],
+    "reposition": [
+      {
+        "base": "NpcChairHighTechRoundChairDirtySit01",
+        "from": [
+          2308.0,
+          1900.0
+        ],
+        "pos": [
+          2296.0,
+          1900.0,
+          567.5
+        ],
+        "rotZ": 4.712,
+        "persistentEdid": "CW_ClinicOfficeChair"
+      },
+      {
+        "base": "MuseumDividerSingle01",
+        "from": [
+          1838.0,
+          2330.0
+        ],
+        "pos": [
+          1800.0,
+          2252.0,
+          567.5
+        ]
+      },
+      {
+        "base": "CartDiagnosticGarage01",
+        "from": [
+          1905.0,
+          2205.0
+        ],
+        "pos": [
+          1985.0,
+          2330.0,
+          567.5
+        ]
+      },
+      {
+        "base": "OxygenTank",
+        "from": [
+          1874.0,
+          2112.0
+        ],
+        "pos": [
+          1930.0,
+          2150.0,
+          607.5
+        ]
+      },
+      {
+        "base": "MetalBucket",
+        "from": [
+          2010.0,
+          2240.0
+        ],
+        "pos": [
+          2040.0,
+          2265.0,
+          567.5
+        ]
+      },
+      {
+        "base": "MetalBucket",
+        "from": [
+          1812.0,
+          2416.0
+        ],
+        "pos": [
+          1770.0,
+          2440.0,
+          567.5
+        ]
+      },
+      {
+        "base": "Clipboard01",
+        "from": [
+          1813.3,
+          2400.6
+        ],
+        "pos": [
+          1762.0,
+          2440.0,
+          567.5
+        ]
+      },
+      {
+        "base": "WoodCrate01",
+        "from": [
+          1872.8,
+          2380.9
+        ],
+        "pos": [
+          1950.0,
+          2385.0,
+          567.5
+        ]
+      },
+      {
+        "base": "TowelBathClean01b",
+        "from": [
+          1875.7,
+          2383.2
+        ],
+        "pos": [
+          1953.0,
+          2387.0,
+          590.5
+        ]
+      },
+      {
+        "base": "EnamelBucket01",
+        "from": [
+          1788.0,
+          2068.0
+        ],
+        "pos": [
+          1755.0,
+          2115.0,
+          567.5
+        ]
+      },
+      {
+        "base": "CeilingLamp01On",
+        "from": [
+          1835.0,
+          2065.0
+        ],
+        "pos": [
+          1885.0,
+          2130.0,
+          742.0
+        ]
+      }
+    ],
+    "keepClear": [
+      {
+        "name": "bed footprint",
+        "x": [
+          1778,
+          1852
+        ],
+        "y": [
+          2285,
+          2435
+        ]
+      },
+      {
+        "name": "bed entry",
+        "x": [
+          1852,
+          1902
+        ],
+        "y": [
+          2320,
+          2400
+        ]
+      },
+      {
+        "name": "desk seat approach",
+        "x": [
+          2232,
+          2272
+        ],
+        "y": [
+          1872,
+          1928
+        ],
+        "allow": []
+      },
+      {
+        "name": "station floor",
+        "x": [
+          1775,
+          1825
+        ],
+        "y": [
+          2040,
+          2090
+        ],
+        "allow": []
+      }
+    ],
+    "swapOut": [
+      {
+        "base": "defaultLightWarm01NS",
+        "from": [
+          1835.0,
+          2065.0
+        ]
+      },
+      {
+        "base": "DefaultLightWhite01Spot",
+        "from": [
+          1835.0,
+          2065.0
+        ]
+      },
+      {
+        "base": "LightBeamThin01Short02Dim",
+        "from": [
+          1835.0,
+          2065.0
+        ]
+      },
+      {
+        "base": "MistLargeRoundDustyDim",
+        "from": [
+          1835.0,
+          2065.0
+        ]
+      },
+      {
+        "base": "defaultLightWarm01NS",
+        "from": [
+          1750.0,
+          2120.0
+        ]
+      },
+      {
+        "base": "WoodCrate01",
+        "from": [
+          2034.1,
+          1912.4
+        ]
+      },
+      {
+        "base": "WoodCrate02",
+        "from": [
+          2035.3,
+          1946.8
+        ]
+      },
+      {
+        "base": "WoodCrate01",
+        "from": [
+          2036.9,
+          1932.0
+        ]
+      },
+      {
+        "base": "HotPlate",
+        "from": [
+          2047.2,
+          1937.8
+        ]
+      },
+      {
+        "base": "WoodCrate02",
+        "from": [
+          1902.2,
+          1558.2
+        ]
+      },
+      {
+        "base": "WoodCrate01",
+        "from": [
+          1903.9,
+          1560.9
+        ]
+      },
+      {
+        "base": "FolderPapers01",
+        "from": [
+          1906.8,
+          1562.6
+        ]
+      },
+      {
+        "base": "WoodCrate03",
+        "from": [
+          2238.2,
+          1640.5
+        ]
+      },
+      {
+        "base": "Loot_Prewar_ToolBox",
+        "from": [
+          2244.4,
+          1643.8
+        ]
+      },
+      {
+        "base": "WoodCrate01",
+        "from": [
+          2079.7,
+          1783.8
+        ]
+      },
+      {
+        "base": "OfficeBoxPapers02",
+        "from": [
+          2082.4,
+          1785.9
+        ]
+      },
+      {
+        "base": "WoodCrate02",
+        "from": [
+          1787.2,
+          1779.6
+        ]
+      },
+      {
+        "base": "WoodCrate03",
+        "from": [
+          1786.4,
+          2211.1
+        ]
+      },
+      {
+        "base": "OfficeBoxPapers03",
+        "from": [
+          1786.2,
+          2211.0
+        ]
+      },
+      {
+        "base": "WoodCrate02",
+        "from": [
+          2322.0,
+          2140.0
+        ]
+      },
+      {
+        "base": "Teapot",
+        "from": [
+          2315.8,
+          2134.6
+        ]
+      },
+      {
+        "base": "Typewriter",
+        "from": [
+          2323.3,
+          2142.8
+        ]
+      },
+      {
+        "base": "WoodCrate01",
+        "from": [
+          1753.4,
+          1859.7
+        ]
+      },
+      {
+        "base": "WoodCrate01",
+        "from": [
+          1753.6,
+          1899.0
+        ]
+      },
+      {
+        "base": "WoodCrate01",
+        "from": [
+          1750.5,
+          1946.5
+        ]
+      },
+      {
+        "base": "WoodCrate02",
+        "from": [
+          1754.6,
+          1863.4
+        ]
+      },
+      {
+        "base": "OfficeBoxPapers03",
+        "from": [
+          1754.0,
+          1902.9
+        ]
+      },
+      {
+        "base": "WoodCrate01",
+        "from": [
+          1754.3,
+          2238.7
+        ]
+      },
+      {
+        "base": "WoodCrate01",
+        "from": [
+          1750.6,
+          2281.2
+        ]
+      },
+      {
+        "base": "WoodCrate03",
+        "from": [
+          1751.9,
+          2284.5
+        ]
+      },
+      {
+        "base": "WoodCrate01",
+        "from": [
+          2157.5,
+          2378.5
+        ]
+      },
+      {
+        "base": "WoodCrate01",
+        "from": [
+          2241.5,
+          2371.5
+        ]
+      },
+      {
+        "base": "WoodCrate01",
+        "from": [
+          2302.6,
+          2376.4
+        ]
+      },
+      {
+        "base": "WoodCrate01",
+        "from": [
+          2105.2,
+          2375.8
+        ]
+      },
+      {
+        "base": "Loot_Prewar_ToolBox",
+        "from": [
+          2163.3,
+          2372.7
+        ]
+      },
+      {
+        "base": "MetalBucket_PreWar",
+        "from": [
+          2243.4,
+          2369.6
+        ]
+      },
+      {
+        "base": "OfficeBoxPapers03",
+        "from": [
+          2303.1,
+          2375.9
+        ]
+      },
+      {
+        "base": "WoodCrate03",
+        "from": [
+          2334.5,
+          2242.6
+        ]
+      },
+      {
+        "base": "WoodCrate03",
+        "from": [
+          2328.1,
+          2298.7
+        ]
+      },
+      {
+        "base": "OfficeBoxPapers02",
+        "from": [
+          2334.6,
+          2244.6
+        ]
+      },
+      {
+        "base": "WoodCrate02",
+        "from": [
+          1940.0,
+          1860.0
+        ]
+      },
+      {
+        "base": "OfficeBoxPapers03",
+        "from": [
+          1942.0,
+          1862.0
+        ]
+      },
+      {
+        "base": "Loot_Prewar_Medkit_Wall",
+        "from": [
+          2333.0,
+          1935.0
+        ],
+        "why": "CLNCL4, 2026-11-10: a WALL medkit with no wall. Its OBND is a back plane at local y 0 hanging 29 u below the origin, so it needs a wall face at its own position - and the nearest one is dress[240] BldgShellConcreteBasementWall01, inner face x 2451.2, 118 u east and itself beyond the floor edge x 2361.8. Instead it hung at z 621-653 over OfficeDesk01 (top 623.5), through the desk-top clutter, which is also why it read as a conflict with PrewarDeskFanOffice01. The clinic keeps its correctly mounted wall medkit, dress[164] on the west wall at (1754,2100), which stays exempt."
+      }
+    ],
+    "clutter": [
+      {
+        "base": "MetalTable01",
+        "pos": [
+          2035,
+          1915,
+          567.5
+        ],
+        "rotZ": 0.0,
+        "r": 57.3
+      },
+      {
+        "base": "SurgicalTray01",
+        "pos": [
+          2022,
+          1913,
+          623.5
+        ],
+        "rotZ": 0.0
+      },
+      {
+        "base": "CircuitBoardAssaultron",
+        "pos": [
+          2016.0,
+          1909.0,
+          623.5
+        ],
+        "rotZ": 3.8
+      },
+      {
+        "base": "BoSR02_Sensor",
+        "pos": [
+          2028,
+          1919,
+          627.0
+        ],
+        "rotZ": 1.86
+      },
+      {
+        "base": "PowerRelayCoil",
+        "pos": [
+          2018,
+          1922,
+          629.0
+        ],
+        "rotZ": 5.04
+      },
+      {
+        "base": "Fuse",
+        "pos": [
+          2031,
+          1907,
+          627.0
+        ],
+        "rotZ": 2.79
+      },
+      {
+        "base": "Fuse",
+        "pos": [
+          2033,
+          1910,
+          627.0
+        ],
+        "rotZ": 3.41
+      },
+      {
+        "base": "CircuitBoardMilitary",
+        "pos": [
+          1995,
+          1921,
+          623.5
+        ],
+        "rotZ": 0.5
+      },
+      {
+        "base": "BoSR02_Capacitor",
+        "pos": [
+          1997.5,
+          1903.5,
+          623.5
+        ],
+        "rotZ": 2.2
+      },
+      {
+        "base": "Institute_Driver01",
+        "pos": [
+          2043,
+          1906,
+          625.5
+        ],
+        "rotZ": 1.3
+      },
+      {
+        "base": "Institute_Spanner01",
+        "pos": [
+          2050,
+          1911,
+          625.5
+        ],
+        "rotZ": 1.7
+      },
+      {
+        "base": "Institute_TriTool01",
+        "pos": [
+          2057,
+          1907,
+          623.5
+        ],
+        "rotZ": 1.1
+      },
+      {
+        "base": "SurgicalCutter",
+        "pos": [
+          2046,
+          1923,
+          623.5
+        ],
+        "rotZ": 0.2
+      },
+      {
+        "base": "VacuumTube",
+        "pos": [
+          2062,
+          1927,
+          630.5
+        ],
+        "rotZ": 0.0
+      },
+      {
+        "base": "VacuumTube",
+        "pos": [
+          2067,
+          1924,
+          630.5
+        ],
+        "rotZ": 0.0
+      },
+      {
+        "base": "HotPlate",
+        "pos": [
+          2074,
+          1903,
+          623.5
+        ],
+        "rotZ": 0.4
+      },
+      {
+        "base": "MS11PowerCables",
+        "pos": [
+          2009,
+          1930,
+          623.5
+        ],
+        "rotZ": 1.0
+      },
+      {
+        "base": "BotModelEyebot",
+        "pos": [
+          2072,
+          1929,
+          623.5
+        ],
+        "rotZ": 3.9
+      },
+      {
+        "base": "ConsoleCabSingle02",
+        "pos": [
+          1748,
+          1830,
+          567.5
+        ],
+        "rotZ": 0.0,
+        "r": 37.7
+      },
+      {
+        "base": "ConScanner01",
+        "pos": [
+          1765,
+          2180,
+          567.5
+        ],
+        "rotZ": 0.0,
+        "r": 40.3
+      },
+      {
+        "base": "SynthGen2Partial",
+        "pos": [
+          1750,
+          2212,
+          567.5
+        ],
+        "rotZ": 0.0,
+        "r": 37.0
+      },
+      {
+        "base": "IVstand01",
+        "pos": [
+          1810,
+          2455,
+          567.5
+        ],
+        "rotZ": 0.0
+      },
+      {
+        "base": "IVBag",
+        "pos": [
+          1826,
+          2438,
+          568.0
+        ],
+        "rotZ": 0.7
+      },
+      {
+        "base": "MetalTable02",
+        "pos": [
+          2322,
+          2140,
+          567.5
+        ],
+        "rotZ": 1.571,
+        "r": 43.3
+      },
+      {
+        "base": "Typewriter",
+        "pos": [
+          2318,
+          2124,
+          623.5
+        ],
+        "rotZ": 4.5
+      },
+      {
+        "base": "Teapot",
+        "pos": [
+          2336,
+          2122,
+          623.5
+        ],
+        "rotZ": 0.8
+      },
+      {
+        "base": "MakeshiftBattery01",
+        "pos": [
+          2306,
+          2150,
+          567.5
+        ],
+        "rotZ": 1.9
+      },
+      {
+        "base": "InstituteMonitorBank02Anim",
+        "pos": [
+          2210,
+          2378,
+          624.5
+        ],
+        "rotZ": 0.0,
+        "r": 72.1
+      },
+      {
+        "base": "RRCourserChipScanner",
+        "pos": [
+          2112,
+          2378,
+          567.5
+        ],
+        "rotZ": 0.0,
+        "r": 61.8
+      },
+      {
+        "base": "Loot_Prewar_ToolBox",
+        "pos": [
+          2290,
+          2350,
+          567.5
+        ],
+        "rotZ": 6.19,
+        "r": 27.7
+      },
+      {
+        "base": "MetalBucket_PreWar",
+        "pos": [
+          2160,
+          2352,
+          567.5
+        ],
+        "rotZ": 0.4
+      },
+      {
+        "base": "MedicalLiquidNitrogenGun",
+        "pos": [
+          2138,
+          2352,
+          568.0
+        ],
+        "rotZ": 1.2
+      },
+      {
+        "base": "ConsoleCabSingle02",
+        "pos": [
+          2325,
+          2290,
+          567.5
+        ],
+        "rotZ": 0.0,
+        "r": 37.7
+      },
+      {
+        "base": "MetalTableRound01",
+        "pos": [
+          1940,
+          1860,
+          567.5
+        ],
+        "rotZ": 0.0,
+        "r": 44.6
+      },
+      {
+        "base": "Blowtorch",
+        "pos": [
+          1926,
+          1868,
+          623.5
+        ],
+        "rotZ": 0.6
+      },
+      {
+        "base": "Wrench02",
+        "pos": [
+          1948,
+          1850,
+          623.5
+        ],
+        "rotZ": 1.2
+      },
+      {
+        "base": "ScrewDriver01",
+        "pos": [
+          1956,
+          1864,
+          624.5
+        ],
+        "rotZ": 2.0
+      },
+      {
+        "base": "Hammer01",
+        "pos": [
+          1934,
+          1846,
+          623.5
+        ],
+        "rotZ": 0.3
+      },
+      {
+        "base": "SmithingToolSaw02",
+        "pos": [
+          1942,
+          1874,
+          623.5
+        ],
+        "rotZ": 3.1
+      },
+      {
+        "base": "Institute_Examiner",
+        "pos": [
+          1920,
+          1854,
+          623.5
+        ],
+        "rotZ": 1.0
+      },
+      {
+        "base": "ConsoleCabSingle01",
+        "pos": [
+          1925,
+          1545,
+          567.5
+        ],
+        "rotZ": 3.14,
+        "r": 41.6
+      }
+    ],
+    "statics": [
+      {
+        "model": "SetDressing\\Office\\TerminalOn.nif",
+        "pos": [
+          2066,
+          1909,
+          567.5
+        ],
+        "rotZ": 0.0,
+        "r": 0.0
+      },
+      {
+        "model": "Cyberware\\Clinic\\Signs\\CWC_Sign_PlateStill.nif",
+        "pos": [
+          1769.2,
+          1822,
+          659.5
+        ],
+        "rotZ": 1.571,
+        "r": 0.0
+      },
+      {
+        "model": "SetDressing\\Office\\TerminalOn.nif",
+        "pos": [
+          2322,
+          2152,
+          567.5
+        ],
+        "rotZ": 4.712,
+        "r": 0.0
+      },
+      {
+        "model": "Cyberware\\Clinic\\Signs\\CWC_Sign_PlateLogo.nif",
+        "pos": [
+          2303.8,
+          2282,
+          659.5
+        ],
+        "rotZ": 1.571,
+        "r": 0.0
+      },
+      {
+        "model": "Cyberware\\Clinic\\Signs\\CWC_Sign_PlateSharps.nif",
+        "pos": [
+          1929,
+          1580.2,
+          617.5
+        ],
+        "rotZ": 0.0,
+        "r": 0.0
+      },
+      {
+        "model": "Cyberware\\Clinic\\Signs\\CWC_Sign_AFrameCash.nif",
+        "pos": [
+          2238,
+          1640,
+          567.5
+        ],
+        "rotZ": 5.8,
+        "r": 24.0
+      },
+      {
+        "model": "Cyberware\\Clinic\\Signs\\CWC_Sign_AFrameKnock.nif",
+        "pos": [
+          2080,
+          1783,
+          567.5
+        ],
+        "rotZ": 0.3,
+        "r": 24.0
+      },
+      {
+        "model": "Cyberware\\Clinic\\Signs\\CWC_Sign_AFrameJars.nif",
+        "pos": [
+          2126,
+          2158,
+          623.5
+        ],
+        "rotZ": 6.0,
+        "r": 0.0,
+        "scale": 0.35
+      }
+    ],
+    "lights": [
+      {
+        "edid": "CW_ClinicKeySpot",
+        "copyOf": "Fallout4.esm|054467",
+        "pos": [
+          1885.0,
+          2130.0,
+          722.0
+        ],
+        "rot": [
+          0.0,
+          -2.0467,
+          0.5372
+        ],
+        "aim": [
+          1835.0,
+          2065.0,
+          625.0
+        ],
+        "radius": 520,
+        "fov": 100.0,
+        "nearClip": 36.0,
+        "fade": 2.6,
+        "color": [
+          255,
+          226,
+          190
+        ]
+      },
+      {
+        "edid": "CW_ClinicAccentTeal",
+        "copyOf": "Fallout4.esm|0560D0",
+        "note": "2026-11-10 (lead-approved row, batch 2): raised from z 660 to 760 so it rims Varga from above-behind (elev +33..+37) instead of lighting her jaw and throat seam from below (elev -18). Position x/y, colour and strength unchanged. VARGA-LIGHTING.md.",
+        "pos": [
+          1765.0,
+          2150.0,
+          760.0
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "radius": 300,
+        "fade": 1.4,
+        "color": [
+          60,
+          210,
+          220
+        ]
+      },
+      {
+        "edid": "CW_ClinicFaceFill",
+        "copyOf": "Fallout4.esm|0560D0",
+        "note": "2026-11-10 (lead-approved row, batch 2): Varga's front fill. Non-shadowing omni (defaultLightCool01NS: Dynamic only, no shadow bits), neutral-warm, about 1/5 of the key's strength. From her face it is front-right at the station (+39), front at the install mark (-22) and front in the sandbox (0), 72-104 u, 8-12 deg above. Before it, nothing lit her face from the front at the mark. VARGA-LIGHTING.md. Revert: git revert of this commit (clinic.json + clinic.lock.json only).",
+        "pos": [
+          1880.0,
+          2000.0,
+          705.0
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "radius": 220,
+        "fade": 0.5,
+        "color": [
+          240,
+          228,
+          214
+        ]
+      },
+      {
+        "edid": "CW_ClinicStandWarm",
+        "copyOf": "Fallout4.esm|0560DC",
+        "pos": [
+          1750.0,
+          2120.0,
+          700.0
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "radius": 130,
+        "fade": 0.35
+      },
+      {
+        "edid": "CW_ClinicMonitorSpill",
+        "note": "QD block 21: the six-screen bank sat in an unlit corner, housing black, screens floating. A dim cool spill in front of the screens, as if from them.",
+        "copyOf": "Fallout4.esm|0560D0",
+        "pos": [
+          2210.0,
+          2320.0,
+          690.0
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "radius": 220,
+        "fade": 0.9,
+        "color": [
+          130,
+          196,
+          214
+        ]
+      }
+    ],
+    "stripDonor": [
+      "15BF30",
+      "15B6CF",
+      "15B6C8",
+      "15BF31",
+      "15B70F",
+      "15BF2E",
+      "15B6AC",
+      "15B6CD"
+    ],
+    "cellLighting": {
+      "fogNear": 350.0,
+      "fogFar": 2600.0,
+      "fogMax": 0.5,
+      "fogNearColor": [
+        9,
+        12,
+        12
+      ],
+      "fogFarColor": [
+        10,
+        13,
+        12
+      ],
+      "directionalColor": [
+        18,
+        20,
+        20
+      ]
+    },
+    "propRest": {
+      "noSettle": true,
+      "noSettleNote": "CLNCL4, 2026-11-10. Resting on a surface is not enough: the west-counter trays all sat on a MetalTable02 top at exactly their own base height and were STILL graded on the floor, because loose props were authored inside each other (two SurgicalTray01 bury 61% of each other 3.5 u apart) and the engine separates them when the cell loads - on a 48-deep counter the push ends on the floor. So every dress/clutter ref whose base is a havok class is placed with the REFR 'Don't Havok Settle' flag 0x20000000, so the engine leaves the ref exactly as the spec puts it. MEASURED, census of Fallout4.esm ae7be31a (1,244,511 refs): the bit is real and vanilla-set, concentrated on simulated classes (AMMO 72/450, WEAP 54/505, ARMO 64/627, MISC 946/36710, ALCH 101/5130, MSTT 684/40140) and near-absent on STAT (74/981804) and FURN (1/13696). BUT it is NOT vanilla's default for a tray: 230 of 234 vanilla SurgicalTray01 refs carry no flags and only 3 carry this bit (CambridgeKendallHospital01 000CFDA3 pins two, one deliberately tilted rx -0.032 ry -0.014; MassPikeTunnel01 0007D8E6 pins a third). Vanilla's approach is correct placement; the flag is its sparing exception. Hence tools/deconflict_props.py also separates the geometry, and this flag is the belt and braces for a GENERATED cell. The flag's human-readable name is not in the plugin (names live in the Creation Kit), so its meaning rests on that distribution and the tilted ref. This does NOT replace the rest/bury/tip checks - those keep the authored position honest; this keeps the engine from rewriting it. prop_support.py's conflict check refuses a build where a conflicting pair is left unflagged.",
+      "note": "prop_support.py gate (2026-11-10, QUALITY FAIL CLNCL1/CLNCL4). Every loose prop must rest on a surface its own OBND agrees with, or havok moves it after the cell loads. These refs are deliberately mounted or hung and rest on nothing; each is named here so a NEW floating prop still refuses the build.",
+      "exempt": [
+        {
+          "base": "Loot_Prewar_Medkit_Wall",
+          "pos": [
+            1754.0,
+            2100.0
+          ],
+          "why": "wall medkit, mounted on the west wall at head height - it hangs, it does not rest"
+        },
+        {
+          "base": "Clothes_InstituteLabCoat",
+          "pos": [
+            1888.0,
+            1592.0
+          ],
+          "why": "hung on PlayerHouse_Ruin_CoatRack01 by the door"
+        },
+        {
+          "base": "Loot_Prewar_Safe_Wall",
+          "pos": [
+            2167.2,
+            2135.3
+          ],
+          "why": "the donor cell's own wall safe, kept where vanilla mounted it"
+        },
+        {
+          "base": "BobbyPinBox",
+          "pos": [
+            1900.5,
+            2442.8
+          ],
+          "why": "the donor cell's own desk clutter, kept as the donor left it"
+        },
+        {
+          "base": "Pencil",
+          "pos": [
+            1904.4,
+            2435.1
+          ],
+          "why": "the donor cell's own desk clutter, kept as the donor left it"
+        },
+        {
+          "base": "WoodBox01",
+          "pos": [
+            2007.1,
+            1936.3
+          ],
+          "why": "the donor cell's own crate, part-sunk into the donor's floor debris"
+        }
+      ]
+    },
+    "sandboxAnchor": {
+      "note": "BETA-1 CRASH FIX A, 2026-11-11. Every Sanctuary arrival crashed about 15 s after the first clinic line, in NavMeshSearchClosePoint::BuildNodePath / BSPathingAvoidNodeArray::ComputeCenter, with Varga's 3D unloaded. MEASURED cause: THREE packages leashed their sandbox to CW_ClinicChair (02000970) at (1876,2020,567.5), and that ref is 15.1 u OUTSIDE the generated navmesh - nearest mesh point (1861.0,2021.0). A 'near reference' sandbox on an off-mesh ref makes the engine run the nearest-navmesh-point search on every evaluation, which is the frame the crash stack names. The chair ref is persistent and in her cell; only its position is off the mesh. THIS MARKER is a persistent XMarkerHeading ON the mesh, and the three packages now leash to it instead. (1828,2060) is the CLOSEST point to the chair that is inside a navmesh triangle with at least 20 u of edge margin - the same 20 u standard surgeonMark's note records for the install mark. The lead's suggested (1861,2021) is NOT usable: it is the nearest EDGE point, so its margin is 0.0 u and it lies exactly on the boundary. Behaviour is preserved: the chair is 62.5 u from here, well inside the 150 u sandbox radius, which is unchanged, so she still idles at the station. She stands at (1800,2065) in the crash log, 28 u from here. Heading matches surgeonMark's so she faces the chair. Does NOT touch the navmesh, the layout or any dressing.",
+      "refEdid": "CW_ClinicSandboxAnchor",
+      "base": "XMarkerHeading",
+      "pos": [
+        1828.0,
+        2060.0,
+        567.5
+      ],
+      "rotZ": 2.583,
+      "meshMargin": 20.1,
+      "distToChair": 62.5
+    }
+  },
+  "stripNote": "collapse set stripped 2026-11-09: the donor's ceiling-breach cave rocks are giant cut-content meshes that tower through the room (seen in the offline plan render); the hole is patched with a plain ceiling tile below.",
+  "shellNote": "donor shell completion 2026-11-09: the unused donor ships with NE/E wall gaps (axon render); sealed with two wall pieces at the donor's own z-759.5 top-origin convention. DiamondPipe01 stripped (towers through the roof).",
+  "cpProps": [
+    {
+      "model": "surgical_chair_b.nif",
+      "pos": [
+        1835.0,
+        2065.0,
+        567.5
+      ],
+      "rotZ": 1.571
+    },
+    {
+      "model": "medical_electronic_largel_c.nif",
+      "pos": [
+        1755.0,
+        2135.0,
+        567.5
+      ],
+      "rotZ": 2.4
+    },
+    {
+      "model": "medical_electronic_largel_c_base.nif",
+      "pos": [
+        1755.0,
+        2135.0,
+        567.5
+      ],
+      "rotZ": 2.4
+    },
+    {
+      "model": "medical_electronic_largel_a.nif",
+      "pos": [
+        1742.0,
+        2000.0,
+        567.5
+      ],
+      "rotZ": 1.571
+    },
+    {
+      "model": "medical_electronic_small_a.nif",
+      "pos": [
+        2338.0,
+        1876.0,
+        624.0
+      ],
+      "rotZ": 4.9
+    },
+    {
+      "model": "medical_electronic_small_a_screen_a.nif",
+      "pos": [
+        2338.0,
+        1876.0,
+        624.0
+      ],
+      "rotZ": 4.9
+    },
+    {
+      "model": "medical_electronic_small_a_panel.nif",
+      "pos": [
+        2338.0,
+        1876.0,
+        624.0
+      ],
+      "rotZ": 4.9
+    },
+    {
+      "model": "q003__monitor_arm_ball.nif",
+      "pos": [
+        1788.0,
+        2112.0,
+        690.0
+      ],
+      "rotZ": 5.2
+    },
+    {
+      "model": "q003__monitor_arm_hinge.nif",
+      "pos": [
+        1788.0,
+        2112.0,
+        690.0
+      ],
+      "rotZ": 5.2
+    },
+    {
+      "model": "lootable_ripperdoc_freezer_medium_entropy_a.nif",
+      "pos": [
+        1652.0,
+        1950.0,
+        567.5
+      ],
+      "rotZ": 1.571
+    },
+    {
+      "model": "lootable_ripperdoc_freezer_medium_entropy_a_door.nif",
+      "pos": [
+        1652.0,
+        1950.0,
+        567.5
+      ],
+      "rotZ": 1.571
+    },
+    {
+      "model": "medical_jar_a.nif",
+      "pos": [
+        2142.0,
+        2146.0,
+        624.0
+      ],
+      "rotZ": 0.4
+    },
+    {
+      "model": "medical_jar_b.nif",
+      "pos": [
+        2148.0,
+        2152.0,
+        624.0
+      ],
+      "rotZ": 2.1
+    },
+    {
+      "model": "medical_jar_c.nif",
+      "pos": [
+        2240.0,
+        1706.0,
+        713.5
+      ],
+      "rotZ": 1.1
+    },
+    {
+      "model": "medical_jar_d.nif",
+      "pos": [
+        2250.0,
+        1712.0,
+        713.5
+      ],
+      "rotZ": 3.3
+    },
+    {
+      "model": "surgical_tool_b_tongs.nif",
+      "pos": [
+        1735.0,
+        1944.0,
+        625.0
+      ],
+      "rotZ": 1.571
+    },
+    {
+      "model": "surgical_tool_d_scissors.nif",
+      "pos": [
+        1739.0,
+        1948.0,
+        625.0
+      ],
+      "rotZ": 1.571
+    },
+    {
+      "model": "surgical_tool_f_scalpel.nif",
+      "pos": [
+        1743.0,
+        1952.0,
+        625.0
+      ],
+      "rotZ": 1.571
+    },
+    {
+      "model": "surgical_tool_a_syringe.nif",
+      "pos": [
+        1747.0,
+        1956.0,
+        625.0
+      ],
+      "rotZ": 1.571
+    },
+    {
+      "model": "surgical_tool_i_gauze.nif",
+      "pos": [
+        1751.0,
+        1960.0,
+        625.0
+      ],
+      "rotZ": 1.571
+    },
+    {
+      "model": "medical_container_f_surgical_cloth_a.nif",
+      "pos": [
+        1746.0,
+        2012.0,
+        625.0
+      ],
+      "rotZ": 0.3
+    }
+  ],
+  "sounds": [
+    {
+      "edid": "CWC_SND_RoomTone",
+      "file": "Sound\\FX\\CW\\clinic\\roomtone.wav",
+      "loop": true,
+      "atten": 0.0,
+      "pos": [
+        2050.0,
+        2050.0,
+        660.0
+      ]
+    },
+    {
+      "edid": "CWC_SND_Machine1",
+      "file": "Sound\\FX\\CW\\clinic\\machine_1.wav",
+      "loop": true,
+      "atten": 6.0,
+      "pos": [
+        2340.0,
+        1900.0,
+        620.0
+      ]
+    },
+    {
+      "edid": "CWC_SND_Machine2",
+      "file": "Sound\\FX\\CW\\clinic\\machine_2.wav",
+      "loop": true,
+      "atten": 6.0,
+      "pos": [
+        1650.0,
+        2020.0,
+        600.0
+      ]
+    },
+    {
+      "edid": "CWC_SND_Machine3",
+      "file": "Sound\\FX\\CW\\clinic\\machine_3.wav",
+      "loop": true,
+      "atten": 6.0,
+      "pos": [
+        2150.0,
+        2138.0,
+        620.0
+      ]
+    },
+    {
+      "edid": "CWC_SND_ChairOn",
+      "file": "Sound\\FX\\CW\\clinic\\chair_on.wav",
+      "loop": false,
+      "atten": 3.0
+    },
+    {
+      "edid": "CWC_SND_InstallPart",
+      "file": "Sound\\FX\\CW\\clinic\\install_part.wav",
+      "loop": false,
+      "atten": 3.0
+    },
+    {
+      "edid": "CWC_SND_Surgery1",
+      "file": "Sound\\FX\\CW\\clinic\\surgery_1.wav",
+      "loop": false,
+      "atten": 3.0
+    },
+    {
+      "edid": "CWC_SND_Surgery2",
+      "file": "Sound\\FX\\CW\\clinic\\surgery_2.wav",
+      "loop": false,
+      "atten": 3.0
+    },
+    {
+      "edid": "CWC_SND_Surgery3",
+      "file": "Sound\\FX\\CW\\clinic\\surgery_3.wav",
+      "loop": false,
+      "atten": 3.0
+    }
+  ]
+}

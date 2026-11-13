@@ -1,0 +1,158 @@
+/* scene.css — the ripperdoc install scene overlay (INSTALL SCENE, 2026-11-10). Contract: docs/INSTALL-SCENE.md.
+ *
+ * Direction: CINEMATIC SURGICAL LETTERBOX. Widescreen bars, her subtitle in the lower bar, a flat flare, and a
+ * lower-third banner — all in the view's own token set (--y yellow, --c cyan, --r red, --mono, --disp). Nothing is
+ * centred over the frame and nothing is opaque for longer than the 0.45 s dip, because the whole point of the
+ * rework is that THE CLINIC NEVER LEAVES THE SCREEN (SCN-1). The old full-screen black card and its centred box
+ * are gone; do not bring them back.
+ *
+ * Classes are switched by scene.js from the DLL's phases: .is-bars .is-dip .is-up .is-line .is-flare .is-third
+ * .is-back, plus .is-chair / .is-short / .is-fade for the mode, .is-local and .is-reduced for the DLL-less path,
+ * and .is-subonly while her line finishes after the scene itself has ended.
+ *
+ * ULTRALIGHT (PrismaUI) RULES, each one paid for in a boot: no CSS grid, no `inset` shorthand (the EKG and status
+ * were invisible in game while the harness looked right — INTEGRATION cycle 2 T5), flat fills on full-screen
+ * layers, every sized <span> is display:block. Transforms and opacity transitions are proven in this file.
+ *
+ * TYPE SIZES ARE DELIBERATELY LARGE. The author plays at 2560x1440 from a couch and the project's first UI rule
+ * is "no small text": a subtitle he cannot read from the sofa is a defect, not a style. Nothing here is under 1rem.
+ */
+
+.scene {
+  position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 90;
+  display: block;
+  pointer-events: none;            /* the scene is watched, not clicked; the skip is a document key handler */
+}
+
+/* ── the dip: the ONLY full-screen black, and only for 0.45 s (SCN-1 fails anything over 0.5 s) ───────────── */
+.scene__dip {
+  position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+  background: #000;
+  opacity: 0;
+  transition: opacity .18s ease-in;
+}
+.scene.is-dip .scene__dip { opacity: 1; }
+/* Coming back up is slower than going down: the fade-up IS beat 3's reveal of the framed chair. */
+.scene.is-up .scene__dip { opacity: 0; transition: opacity .6s ease-out; }
+/* The 2D fallback and the short beat never go black. They get a faint veil instead, so the world stays readable
+   behind the flare and the two modes still look like one feature. */
+.scene.is-fade .scene__dip, .scene.is-short .scene__dip, .scene.is-local .scene__dip {
+  background: rgba(2, 4, 7, .34);
+  opacity: 1;
+  transition: opacity .25s ease;
+}
+.scene.is-fade.is-third .scene__dip, .scene.is-short.is-third .scene__dip, .scene.is-local.is-third .scene__dip { opacity: 0; }
+
+/* ── letterbox bars ──────────────────────────────────────────────────────────────────────────────────────── */
+.scene__bar {
+  position: absolute; left: 0; right: 0;
+  height: 13.5vh;
+  background: #05070a;
+  transform: translateY(-101%);                       /* 101% so no hairline of the bar shows while it is parked */
+  transition: transform .35s cubic-bezier(.4, 0, .2, 1);
+}
+.scene__bar--top { top: 0; }
+.scene__bar--bot { bottom: 0; transform: translateY(101%); }
+.scene.is-bars .scene__bar--top, .scene.is-bars .scene__bar--bot { transform: translateY(0); }
+/* Beat 8: the bars open again as the menu panes slide back in. */
+.scene.is-back .scene__bar--top { transform: translateY(-101%); }
+.scene.is-back .scene__bar--bot { transform: translateY(101%); }
+/* The short beat and the fallback have no camera work, so they have no bars either. */
+.scene.is-short .scene__bar, .scene.is-fade .scene__bar, .scene.is-local .scene__bar { display: none; }
+
+/* ── her subtitle, inside the lower bar, so her face is never under it (SCN-3) ───────────────────────────── */
+.scene__sub {
+  position: absolute; left: 8vw; right: 8vw; bottom: 0; top: 0;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0;
+  font-family: var(--mono);
+  font-size: 1.65rem;                                  /* couch-readable at 1440p; never shrink this to fit */
+  line-height: 1.35;
+  letter-spacing: .02em;
+  text-align: center;
+  color: var(--c);
+  text-shadow: 0 2px 14px rgba(0, 0, 0, .9);
+  opacity: 0;
+  transition: opacity .22s ease;
+}
+.scene.is-line .scene__sub { opacity: 1; }
+/* The scene has ended but she is still talking: the bars are gone, the line stays until her clip does (SCN-6). */
+.scene.is-subonly .scene__sub {
+  top: auto; bottom: 7vh; height: auto;
+  opacity: 1;
+  padding: var(--s2) var(--s4);
+  background: rgba(5, 7, 10, .72);
+}
+
+/* ── beat 6: the flare. A FLAT FILL, never a blur filter: Ultralight has no usable backdrop-filter and a
+      full-screen filter is the one thing that reliably tanked the frame rate in this view. The engine-side
+      imagespace A/B lives behind [Scene] iFlare in the DLL, not here. ─────────────────────────────────────── */
+.scene__flare {
+  position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+  background: #e8f4ff;
+  opacity: 0;
+  transition: opacity .3s ease-out;
+}
+.scene.is-flare .scene__flare { opacity: .82; transition: opacity .34s ease-in; }
+/* It must clear COMPLETELY: SCN-12 fails any trace left after beat 7. */
+.scene.is-third .scene__flare { opacity: 0; transition: opacity .45s ease-out; }
+
+/* ── beat 7: the lower-third. Left-aligned over the lower bar, NOT a centred box. ────────────────────────── */
+.scene__third {
+  position: absolute; left: 8vw; right: 8vw; bottom: 17vh;
+  display: block;
+  text-align: left;
+}
+.scene.is-short .scene__third, .scene.is-fade .scene__third, .scene.is-local .scene__third { bottom: 12vh; }
+.scene.is-third .scene__third { animation: scene-third-in .4s cubic-bezier(.2, .9, .3, 1) both; }
+@keyframes scene-third-in {
+  from { transform: translateX(-18px); opacity: 0; }
+  to   { transform: translateX(0); opacity: 1; }
+}
+.scene__thirdrule {
+  display: block; width: 5.5rem; height: 3px;
+  margin-bottom: var(--s2);
+  background: var(--y);
+  box-shadow: 0 0 18px rgba(252, 238, 10, .5);
+}
+.scene__thirdkind {
+  display: block;
+  font-family: var(--disp); font-weight: 700; font-size: 2.6rem;
+  letter-spacing: .26em; text-transform: uppercase;
+  color: var(--y);
+  text-shadow: 0 0 30px rgba(252, 238, 10, .4), 0 2px 10px rgba(0, 0, 0, .95);
+}
+.scene__thirdname {
+  display: block;
+  margin-top: var(--s1);
+  font-family: var(--mono); font-size: 1.45rem; letter-spacing: .14em;
+  color: var(--c);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, .95);
+}
+
+/* ── the skip hint. Only while a skip would do something (SCN-10 arms it at 1.0 s), and only in the chair
+      scene: a 2.0 s beat is over before a hint would finish fading in. ──────────────────────────────────── */
+.scene__skip {
+  position: absolute; right: 8vw; bottom: 4.5vh;
+  display: block;
+  font-family: var(--mono); font-size: 1rem; letter-spacing: .2em; text-transform: uppercase;
+  color: var(--ink3);
+  text-shadow: 0 1px 8px rgba(0, 0, 0, .9);
+  opacity: 0;
+  transition: opacity .3s ease;
+}
+.scene.is-chair.is-bars .scene__skip { opacity: .75; transition: opacity .4s ease 1s; }
+.scene.is-chair.is-third .scene__skip, .scene.is-back .scene__skip { opacity: 0; transition: opacity .2s ease; }
+.scene.is-short .scene__skip, .scene.is-fade .scene__skip, .scene.is-local .scene__skip, .scene.is-subonly .scene__skip { display: none; }
+
+/* ── reduced motion: everything still READS, nothing moves. The content and its hierarchy are identical. ─── */
+.scene.is-reduced .scene__bar,
+.scene.is-reduced .scene__dip,
+.scene.is-reduced .scene__flare,
+.scene.is-reduced .scene__sub { transition: none; }
+.scene.is-reduced.is-third .scene__third { animation: none; opacity: 1; }
+@media (prefers-reduced-motion: reduce) {
+  .scene__bar, .scene__dip, .scene__flare, .scene__sub { transition: none; }
+  .scene.is-third .scene__third { animation: none; opacity: 1; }
+  .scene.is-flare .scene__flare { opacity: .5; }   /* a quieter flash: the beat still reads, nothing pulses */
+}

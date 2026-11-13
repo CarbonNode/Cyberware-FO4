@@ -1,0 +1,13 @@
+# ASSETS' CP2077 item/mod icons are copied in here at deploy time and must
+# NEVER be committed (the lead, 2026-11-08). Source of truth on the test rig:
+#   the extracted assets folder, icons\png\  (+ icons-manifest.json)
+#
+# This is a WHITELIST, not a list of known prefixes. SPEC's 2026-11-08 push cut
+# ten more CP icons whose names (AgileJoints.png, T_1000.png, icon_tattoo_tyger.png,
+# ...) matched none of the cw_*/cwf_* patterns this file used to list, so they
+# turned up as untracked and would have been committed. Ignore everything, then
+# name the few files this view actually owns.
+*
+!.gitignore
+!slot-*.png
+!body-scan.png

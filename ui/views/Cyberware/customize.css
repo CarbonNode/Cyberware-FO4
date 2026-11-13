@@ -1,0 +1,194 @@
+/* customize.css -- the ripperdoc's Customize page. Same "clinic terminal" language and tokens as styles.css.
+   Ultralight rules from that file apply: no filter, no box-shadow, chamfers are clip-path. The glow in the preview is
+   layered gradients because blur does not exist here. Nothing loops; the test pulse is one-shot. */
+
+.seg--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }   /* also added by the polish pass; identical */
+.seg--6 { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+.hdr__view.seg--3 { min-width: 19.5rem; }
+
+.custom {
+  display: grid; min-height: 0;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.25fr) minmax(0, 0.95fr);
+  gap: 2px; background: var(--line);
+  --tint: #00f0ff; --tint-soft: rgba(0,240,255,.4); --tint-wide: rgba(0,240,255,.2); --g: 1; --hue: hsl(180,100%,50%);
+}
+.cz__col { display: flex; flex-direction: column; min-height: 0; min-width: 0; background: var(--p1); padding: var(--s5) var(--s6); }
+
+.cz__h { margin: 0; font-size: 1.1rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--ink2); }
+.cz__k { font-family: var(--mono); font-size: 1.15rem; letter-spacing: .08em; color: var(--ink2); }
+
+/* ---- column 1: target rows ---- */
+.cz__list .pane__h { margin-bottom: var(--s4); }
+.cz__targets { display: grid; gap: var(--s2); flex: 1 1 auto; grid-auto-rows: minmax(4.4rem, 1fr); }
+.cz__t {
+  display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: var(--s4);
+  width: 100%; min-height: 4.4rem; padding: var(--s2) var(--s4); text-align: left;
+  background: var(--p2); border-left: 3px solid transparent;
+  transition: background .13s ease, border-color .13s ease;
+}
+.cz__t:hover { background: var(--p3); }
+.cz__t.is-on { background: var(--p3); border-left-color: var(--y); }
+.cz__ticon { display: block; width: 3.2rem; height: 3.2rem; background: #0a1017; overflow: hidden; }
+.cz__ticon img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.cz__tt { display: flex; flex-direction: column; min-width: 0; }
+.cz__tn { font-size: 1.14rem; font-weight: 700; color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.cz__ts { font-size: 1rem; color: var(--ink2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.cz__chip {
+  display: block; width: 2.6rem; height: 1.5rem;
+  clip-path: polygon(8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 8px);
+}
+
+.cz__fx { margin-top: auto; padding-top: var(--s5); display: grid; gap: var(--s3); }
+.cz__toggle {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: var(--s4);
+  width: 100%; min-height: 4rem; padding: var(--s2) var(--s4); text-align: left; background: var(--p2);
+  transition: background .13s ease;
+}
+.cz__toggle:hover { background: var(--p3); }
+.cz__sw2 {
+  position: relative; display: block; width: 3.6rem; height: 1.7rem; background: #0a1017; border: 1px solid var(--line2);
+  transition: background .13s ease;
+}
+.cz__sw2::after {
+  content: ''; position: absolute; top: 3px; bottom: 3px; left: 3px; width: 1.5rem; background: var(--ink3);
+  transition: transform .13s ease, background .13s ease;
+}
+.cz__toggle.is-on .cz__sw2 { background: rgba(252,238,10,.14); border-color: var(--y-dim); }
+.cz__toggle.is-on .cz__sw2::after { background: var(--y); transform: translateX(1.6rem); }
+.cz__ghost {
+  min-height: var(--s7); padding: var(--s2) var(--s4); text-align: center;
+  font-size: 1rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--ink); background: none; border: 1px solid var(--line2);
+  transition: background .13s ease, border-color .13s ease;
+}
+.cz__ghost:hover { background: var(--p3); border-color: var(--ink3); }
+
+/* ---- column 2: the live preview stage ---- */
+.cz__ph { display: flex; align-items: baseline; gap: var(--s4); margin-bottom: var(--s4); }
+.cz__stage {
+  position: relative; flex: 1 1 auto; min-height: 16rem; overflow: hidden;
+  background:
+    radial-gradient(ellipse at 50% 55%, var(--tint-wide) 0%, transparent 62%),
+    repeating-linear-gradient(0deg, rgba(255,255,255,.015) 0 1px, transparent 1px 4px),
+    #070b10;
+  clip-path: polygon(var(--cut) 0, 100% 0, 100% calc(100% - var(--cut)), calc(100% - var(--cut)) 100%, 0 100%, 0 var(--cut));
+}
+.cz__stage::after {   /* the one-shot Test pulse */
+  content: ''; position: absolute; inset: 0; pointer-events: none; opacity: 0;
+  background: radial-gradient(ellipse at 50% 55%, var(--tint) 0%, var(--tint-soft) 34%, transparent 70%);
+}
+.cz__stage.is-flash::after { animation: czflash .9s ease-out 1 both; }
+@keyframes czflash { 0% { opacity: 0; } 12% { opacity: .85; } 100% { opacity: 0; } }
+.cz__note { margin: var(--s4) 0 0; font-size: 1.05rem; color: var(--ink2); max-width: 60ch; }
+.pv { position: absolute; inset: 0; }
+
+/* Mantis: a dark body, one thin hot edge. Halo strength follows --g. */
+.pv--blade { transform: rotate(-8deg); }
+.pvb__halo, .pvb__body, .pvb__edge { position: absolute; left: 6%; width: 88%; }
+.pvb__halo {
+  top: 34%; height: 30%; left: 2%; width: 96%; opacity: var(--g);
+  background: radial-gradient(ellipse 50% 50% at 50% 50%, var(--tint-soft) 0%, var(--tint-wide) 42%, transparent 100%);
+}
+.pvb__body {
+  top: 48.2%; height: 8%;
+  background: linear-gradient(to bottom, #2e353f 0%, #171c23 45%, #0c1015 100%);
+  clip-path: polygon(0 34%, 3% 0, 90% 0, 100% 42%, 91% 100%, 3% 100%, 0 68%);
+}
+.pvb__spine { position: absolute; left: 14%; width: 66%; top: 52.4%; height: 2px; background: #414b57; opacity: .7; }
+.pvb__edge { top: 47.8%; height: 1.15%; background: var(--tint); clip-path: polygon(0 40%, 3% 0, 90% 0, 100% 100%, 90% 80%, 3% 100%); opacity: calc(.28 + .72 * var(--g)); }
+
+/* Monowire */
+.pv--wire { width: 100%; height: 100%; }
+.pv--wire path { fill: none; stroke-linecap: round; }
+.pvw__halo { stroke: var(--tint-wide); stroke-width: 34; opacity: var(--g); }
+.pvw__mid  { stroke: var(--tint-soft); stroke-width: 13; opacity: var(--g); }
+.pvw__core { stroke: var(--tint); stroke-width: 4; }
+
+/* Gorilla: knuckle plates with one lit core each */
+.pv--knuckles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 5%; padding: 22% 13%; }
+.pvk { position: relative; }
+.pvk__halo { position: absolute; inset: -30%; opacity: var(--g); background: radial-gradient(closest-side, var(--tint-soft) 0%, var(--tint-wide) 50%, transparent 100%); }
+.pvk__plate { position: absolute; inset: 0; background: linear-gradient(160deg, #3a434e, #161b22); clip-path: polygon(16% 0, 100% 0, 100% 84%, 84% 100%, 0 100%, 0 16%); }
+.pvk__lamp { position: absolute; left: 24%; right: 24%; top: 42%; height: 16%; background: var(--tint); opacity: calc(.25 + .75 * var(--g)); }
+
+/* Launcher: a forearm tube, three light rings, a lit bore */
+.pvl__halo { position: absolute; left: 8%; right: 12%; top: 28%; bottom: 28%; opacity: var(--g); background: radial-gradient(ellipse at 70% 50%, var(--tint-soft), transparent 70%); }
+.pvl__tube { position: absolute; left: 10%; right: 18%; top: 38%; bottom: 38%; background: linear-gradient(to bottom, #3b444f, #151a21 62%, #0d1116); clip-path: polygon(0 12%, 96% 0, 100% 16%, 100% 84%, 96% 100%, 0 88%); }
+.pvl__ring { position: absolute; top: 37%; bottom: 37%; width: 1.1%; background: var(--tint); opacity: calc(.25 + .75 * var(--g)); }
+.pvl__ring.r1 { left: 26%; } .pvl__ring.r2 { left: 44%; } .pvl__ring.r3 { left: 62%; }
+.pvl__bore { position: absolute; right: 16%; top: 43%; bottom: 43%; width: 6%; background: radial-gradient(ellipse at 70% 50%, var(--tint) 0%, var(--tint-soft) 50%, transparent 76%); opacity: calc(.3 + .7 * var(--g)); }
+
+/* Kiroshi: an optic and its scan readout */
+.pve__halo { position: absolute; left: 50%; top: 50%; width: 46%; aspect-ratio: 1; transform: translate(-50%,-50%); background: radial-gradient(closest-side, var(--tint-soft) 0%, var(--tint-wide) 42%, transparent 100%); }
+.pve__ball, .pve__iris, .pve__pupil { position: absolute; left: 50%; top: 50%; border-radius: 50%; transform: translate(-50%,-50%); }
+.pve__ball { width: 26%; aspect-ratio: 1; background: radial-gradient(circle at 40% 36%, #2b333d, #0d1116 72%); }
+.pve__iris { width: 15%; aspect-ratio: 1; border: .7rem solid var(--tint); background: rgba(0,0,0,.25); }
+.pve__pupil { width: 5.5%; aspect-ratio: 1; background: #040608; }
+.pve__read { position: absolute; left: 6%; bottom: 8%; display: flex; flex-direction: column; font-family: var(--mono); color: var(--tint); }
+.pve__read b { font-family: var(--disp); font-size: 1.15rem; font-weight: 700; letter-spacing: .14em; }
+.pve__read span { font-size: 1.05rem; }
+
+/* HUD accent: a real plate in the accent colour */
+.pv--hud { display: grid; place-items: center; }
+.pvh__plate { position: relative; width: 58%; padding: var(--s5) var(--s6); background: rgba(6,9,13,.82); border-left: 4px solid var(--tint); }
+.pvh__tag { display: block; font-size: 1rem; font-weight: 700; letter-spacing: .16em; color: var(--ink2); }
+.pvh__row { display: flex; align-items: center; gap: var(--s5); margin: var(--s4) 0; }
+.pvh__ring { display: grid; place-items: center; width: 6rem; height: 6rem; border-radius: 50%; border: 6px solid var(--tint); }
+.pvh__ring b { font-family: var(--mono); font-size: 1.6rem; color: var(--ink); line-height: 1; }
+.pvh__ring i { font-family: var(--mono); font-size: .95rem; font-style: normal; color: var(--ink2); line-height: 1; margin-top: -1.4rem; }
+.pvh__name { font-size: 1.7rem; font-weight: 700; color: var(--tint); white-space: nowrap; }
+.pvh__bar { height: 8px; background: rgba(148,170,186,.22); }
+.pvh__bar span { display: block; height: 100%; width: 72%; background: var(--tint); }
+
+/* ---- column 3: the picker ---- */
+.cz__pick { gap: var(--s4); }
+.cz__sw { border-color: var(--line2); }
+.cz__swatch {
+  display: flex; flex-direction: column; align-items: stretch; gap: var(--s1); padding: var(--s2);
+  border-right: 1px solid var(--line); transition: background .13s ease;
+}
+.cz__swatch:last-child { border-right: 0; }
+.cz__swatch:hover { background: var(--p3); }
+.cz__swatch.is-on { background: var(--p3); }
+.cz__swfill { display: block; height: 2.4rem; }
+.cz__swatch--stock .cz__swfill { background: linear-gradient(135deg, #1a222b 0 46%, var(--ink3) 46% 54%, #1a222b 54%); }
+.cz__swatch.is-on .cz__swfill { border-bottom: 4px solid var(--y); }
+.cz__swl { font-size: 1.05rem; font-weight: 600; letter-spacing: .04em; color: var(--ink2); text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+.cz__sv {
+  position: relative; flex: 1 1 auto; min-height: 11rem; cursor: crosshair;
+  background: linear-gradient(to top, #000, transparent), linear-gradient(to right, #fff, transparent), var(--hue);
+}
+.cz__mark {
+  position: absolute; width: 1.7rem; height: 1.7rem; margin: -.85rem 0 0 -.85rem; border: 3px solid #fff; border-radius: 50%;
+  outline: 2px solid rgba(0,0,0,.55); pointer-events: none;
+}
+.cz__hue {
+  position: relative; flex: 0 0 auto; height: 2.3rem; cursor: ew-resize;
+  background: linear-gradient(to right, #f00, #ff0 17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00);
+}
+.cz__knob {
+  position: absolute; top: -5px; bottom: -5px; width: 12px; margin-left: -6px; background: #fff; outline: 2px solid rgba(0,0,0,.55); pointer-events: none;
+}
+.cz__hexrow { display: flex; align-items: center; gap: var(--s4); }
+.cz__hex {
+  flex: 1 1 auto; min-width: 0; min-height: var(--s7); padding: 0 var(--s3);
+  font-family: var(--mono); font-size: 1.15rem; letter-spacing: .1em; text-transform: uppercase;
+  background: #0a1017; color: var(--ink); border: 1px solid var(--line2);
+}
+.cz__hex:focus { border-color: var(--y); outline: none; }
+.cz__glow { display: grid; gap: var(--s3); }
+.cz__gh { display: flex; align-items: baseline; justify-content: space-between; }
+.cz__num { font-family: var(--mono); font-size: 1.2rem; color: var(--ink); }
+.cz__slider { position: relative; height: 1.7rem; margin: 2px 6px; background: #0a1017; border: 1px solid var(--line2); cursor: ew-resize; }
+.cz__sfill { position: absolute; left: 0; top: 0; bottom: 0; background: var(--tint); }
+.cz__slider .cz__knob { top: -4px; bottom: -4px; }
+
+@media (max-width: 1200px) {
+  .custom { grid-template-columns: minmax(0, 1fr); overflow-y: auto; }
+  .cz__stage { min-height: 20rem; }
+  .cz__sv { min-height: 14rem; flex: 0 0 auto; }
+  .cz__col { padding: var(--s4); }
+  .hdr__view.seg--3 { min-width: 0; }
+}
+@media (prefers-reduced-motion: reduce) { .cz__stage.is-flash::after { animation: none; } }

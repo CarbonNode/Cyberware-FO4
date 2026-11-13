@@ -1,0 +1,120 @@
+/* settings.css — the Settings tab (BETA QA, 2026-11-08).
+   Own file so MENU POLISH's styles.css rework merges cleanly; uses only styles.css tokens. */
+
+/* styles.css ships seg--2/4/5; kept for any straggling seg--3 user. */
+.seg--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+/* The header now holds 4 tabs (Chrome/Perks/Customize/Settings). customize.css only widened
+   seg--3, so the seg--4 header gets its room here (CUSTOMIZATION f279913b, 2026-11-08). */
+.hdr__view.seg--4 { min-width: 26rem; }
+
+.setview {
+  overflow-y: auto;
+  min-height: 0;
+  padding: var(--s6) var(--s8) var(--s8);
+}
+.setwrap { max-width: 1280px; margin: 0 auto; display: grid; gap: var(--s6); }
+
+.setview__head { display: grid; gap: var(--s2); }
+.setview__lede { margin: 0; color: var(--ink2); font-size: 1.05rem; max-width: 62ch; line-height: 1.5; }
+
+.setgrp {
+  background: var(--p1);
+  border: 1px solid var(--line);
+  clip-path: polygon(var(--cut) 0, 100% 0, 100% calc(100% - var(--cut)), calc(100% - var(--cut)) 100%, 0 100%, 0 var(--cut));
+  padding: var(--s5) var(--s6) var(--s4);
+}
+.setgrp__head { display: flex; align-items: baseline; gap: var(--s4); margin-bottom: var(--s3); }
+.setgrp__h {
+  margin: 0;
+  font-family: var(--disp); font-weight: 700; font-size: 1.35rem;
+  letter-spacing: .14em; text-transform: uppercase; color: var(--y);
+}
+.setgrp__sub { font-family: var(--mono); font-size: .8rem; letter-spacing: .12em; color: var(--ink3); text-transform: uppercase; }
+
+.setrow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--s6);
+  padding: var(--s4) 0;
+  border-top: 1px solid var(--line);
+  min-height: var(--row-h);
+}
+.setrow:first-of-type { border-top: 0; }
+.setrow.is-off { opacity: .45; }
+.setrow__text { display: grid; gap: var(--s1); min-width: 0; }
+.setrow__label { font-family: var(--disp); font-weight: 600; font-size: 1.18rem; letter-spacing: .04em; color: var(--ink); }
+.setrow__desc { color: var(--ink2); font-size: .98rem; line-height: 1.45; max-width: 60ch; text-wrap: pretty; }
+
+/* toggle: a big CP switch, 44px hit target, word beside it so the state never relies on colour */
+.tgl {
+  display: inline-flex; align-items: center; gap: var(--s3);
+  background: none; border: 0; cursor: pointer; padding: var(--s2);
+  min-height: var(--row-h);
+}
+.tgl__track {
+  width: 74px; height: 32px; position: relative; display: inline-block;
+  background: var(--p3); border: 1px solid var(--line2);
+  clip-path: polygon(8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 8px);
+  transition: background .15s ease;
+}
+.tgl__knob {
+  position: absolute; top: 3px; left: 4px; width: 30px; height: 24px;
+  background: var(--ink3);
+  clip-path: polygon(5px 0, 100% 0, 100% calc(100% - 5px), calc(100% - 5px) 100%, 0 100%, 0 5px);
+  transition: left .15s ease, background .15s ease;
+}
+.tgl.is-on .tgl__track { background: rgba(252, 238, 10, .16); border-color: var(--y-dim); }
+.tgl.is-on .tgl__knob { left: 39px; background: var(--y); }
+.tgl__word { font-family: var(--mono); font-size: .92rem; letter-spacing: .2em; color: var(--ink3); width: 3ch; text-align: left; }
+.tgl.is-on .tgl__word { color: var(--y); }
+.tgl:focus-visible { outline: 2px solid var(--c); outline-offset: 3px; }
+.tgl[disabled] { cursor: default; }
+
+/* stepper: big minus / value / plus cells (Ultralight has no native range input,
+   and these read better from the couch and under d-pad navigation) */
+.setstep { display: inline-grid; grid-template-columns: var(--s7) 7ch var(--s7); align-items: stretch; min-height: var(--row-h); }
+.setstep__b {
+  font-family: var(--mono); font-size: 1.4rem; color: var(--ink);
+  background: var(--p2); border: 1px solid var(--line2); cursor: pointer;
+  min-width: var(--s7); min-height: var(--row-h);
+}
+.setstep__b:first-child { clip-path: polygon(10px 0, 100% 0, 100% 100%, 0 100%, 0 10px); }
+.setstep__b:last-child { clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%); }
+.setstep__b:hover:not([disabled]) { background: var(--p3); color: var(--y); }
+.setstep__b:focus-visible { outline: 2px solid var(--c); outline-offset: 2px; }
+.setstep__b[disabled] { opacity: .35; cursor: default; }
+.setstep__v {
+  display: grid; place-content: center;
+  font-family: var(--mono); font-size: 1.22rem; color: var(--y);
+  background: var(--p1); border-top: 1px solid var(--line2); border-bottom: 1px solid var(--line2);
+  text-align: center;
+}
+
+.setfoot { display: flex; align-items: center; gap: var(--s5); flex-wrap: wrap; }
+.setreset, .setact {
+  font-family: var(--disp); font-weight: 600; font-size: 1.05rem; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--ink); background: var(--p2); border: 1px solid var(--line2);
+  padding: var(--s3) var(--s5); min-height: var(--row-h); cursor: pointer;
+  clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+}
+.setreset:hover, .setact:hover:not([disabled]) { background: var(--p3); color: var(--y); }
+.setreset:focus-visible, .setact:focus-visible { outline: 2px solid var(--c); outline-offset: 3px; }
+.setact { white-space: nowrap; justify-self: end; }
+.setact[disabled] { opacity: .35; cursor: default; }
+
+/* key-rebind row (Setup view key) */
+.setkey { display: flex; align-items: center; gap: var(--s4); justify-self: end; flex-wrap: wrap; justify-content: flex-end; }
+.setkey__v {
+  min-width: 96px; min-height: var(--row-h); display: grid; place-content: center;
+  font-family: var(--mono); font-size: 1.22rem; color: var(--y);
+  background: var(--p1); border: 1px solid var(--line2); padding: 0 var(--s4);
+  text-align: center; white-space: nowrap;
+}
+.setkey__err { flex-basis: 100%; text-align: right; font-family: var(--mono); font-size: .9rem; color: var(--r); }
+.setfoot__note { font-family: var(--mono); font-size: .85rem; color: var(--ink3); }
+
+@media (max-width: 1100px) {
+  .setview { padding: var(--s4); }
+  .setrow { grid-template-columns: 1fr; gap: var(--s3); }
+}

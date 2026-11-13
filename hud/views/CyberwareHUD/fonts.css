@@ -1,0 +1,5 @@
+/* Vendored with the view: there is no network in game. Weights 600/700 and the
+   data mono only -- the HUD never uses Rajdhani 400. */
+@font-face{font-family:'Rajdhani';font-style:normal;font-weight:600;font-display:block;src:url('fonts/Rajdhani-600.woff2') format('woff2');}
+@font-face{font-family:'Rajdhani';font-style:normal;font-weight:700;font-display:block;src:url('fonts/Rajdhani-700.woff2') format('woff2');}
+@font-face{font-family:'Share Tech Mono';font-style:normal;font-weight:400;font-display:block;src:url('fonts/ShareTechMono-400.woff2') format('woff2');}

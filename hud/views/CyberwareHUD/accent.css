@@ -1,0 +1,14 @@
+/* accent.css -- the one-shot ability pulse, tinted by the player's chosen accent. Rules of the HUD apply (styles.css
+   header): nothing loops, no filter, no box-shadow. Four feathered edge strips rather than one full-screen radial so
+   the centre of the screen is never washed. Display-none between pulses: no cost while idle. */
+.cw-pulse { position: fixed; inset: 0; pointer-events: none; opacity: 0; display: none; z-index: 40; }
+.cw-pulse.is-on { display: block; animation: cwpulse .95s ease-out 1 both; }
+.cw-pulse span { position: absolute; display: block; }
+.cw-pulse .t { left: 0; right: 0; top: 0; height: 15%; background: linear-gradient(to bottom, var(--pulse), transparent); }
+.cw-pulse .b { left: 0; right: 0; bottom: 0; height: 15%; background: linear-gradient(to top, var(--pulse), transparent); }
+.cw-pulse .l { left: 0; top: 0; bottom: 0; width: 10%; background: linear-gradient(to right, var(--pulse), transparent); }
+.cw-pulse .r { right: 0; top: 0; bottom: 0; width: 10%; background: linear-gradient(to left, var(--pulse), transparent); }
+@keyframes cwpulse { 0% { opacity: 0; } 13% { opacity: .78; } 100% { opacity: 0; } }
+.plate--optic { --y: var(--kiroshi, #fcee0a); }
+.plate--optic::before { background: var(--y); }
+@media (prefers-reduced-motion: reduce) { .cw-pulse.is-on { animation: none; opacity: 0; } }

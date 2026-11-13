@@ -1,0 +1,129 @@
+/* layout.css -- the HUD layout editor (layout.js) and what the saved layout needs from the plates.
+   Same tokens as styles.css. Ultralight envelope: no box-shadow, no filter, no backdrop-filter, nothing loops.
+   No small text: the smallest line here is 0.86rem (16px at 1440, 24px at 2560). */
+
+/* ---- the saved layout ---------------------------------------------------- */
+/* a moved plate leaves its rail (layout.js sets position/left/top/transform inline); it keeps its own width */
+.plate[data-moved="true"] { margin: 0; }
+
+/* the threat chevrons scale with the ring's s (layout.js sets --ts on #threats) */
+.threats .threat { width: calc(12rem * var(--ts, 1)); }
+.threats .threat__arrow { width: calc(2.6rem * var(--ts, 1)); height: calc(2.6rem * var(--ts, 1)); }
+.threats .threat__label { font-size: calc(0.95rem * var(--ts, 1)); }
+
+/* ---- edit mode ------------------------------------------------------------ */
+/* the editor shows the HUD whatever the game says (the plugin pauses the game and focuses this view) */
+.hud[data-edit="true"] { display: block !important; }
+
+/* the threat ring as a box you can see and move */
+.hle__ring {
+  position: fixed; pointer-events: none;
+  border: 2px dashed rgba(255, 59, 71, 0.55);
+}
+.hud:not([data-edit="true"]) .hle__ring { display: none; }
+
+/* the sample note shows still while editing */
+.note.is-sample { animation: none; opacity: 1; }
+
+.hle {
+  position: fixed; inset: 0; z-index: 100;
+  pointer-events: auto; cursor: default;
+  font-family: var(--disp); color: var(--ink);
+  background: rgba(3, 6, 9, 0.28);
+}
+.hle.is-dragging { cursor: grabbing; }
+
+.hle__frames, .hle__guides { position: absolute; inset: 0; pointer-events: none; }
+
+/* one frame per element: the bounding box, its name and scale, the resize handle */
+.hle__f {
+  position: absolute; pointer-events: auto; cursor: grab;
+  border: 2px solid rgba(0, 240, 255, 0.55);
+  background: rgba(0, 240, 255, 0.05);
+  transition: border-color .12s ease, background .12s ease;
+}
+.hle__f:hover { border-color: var(--c); background: rgba(0, 240, 255, 0.10); }
+.hle__f.is-moved { border-style: solid; }
+.hle__f.is-on { border-color: var(--y); background: rgba(252, 238, 10, 0.07); }
+.hle.is-dragging .hle__f.is-on { background: rgba(252, 238, 10, 0.12); }
+/* the ring frame is mostly empty screen: only its label and handle take the mouse */
+.hle__f[data-id="threats"] { pointer-events: none; border-color: rgba(255, 59, 71, 0.65); background: transparent; }
+.hle__f[data-id="threats"] .hle__lab, .hle__f[data-id="threats"] .hle__h { pointer-events: auto; z-index: 3; }
+/* its label sits on the bottom edge at the centre, where no plate lives (the corners all have one) */
+.hle__f[data-id="threats"] .hle__lab { left: 50%; bottom: 0; top: auto; transform: translate(-50%, 50%); }
+.hle__f[data-id="threats"].is-on { border-color: var(--r); }
+
+.hle__lab {
+  position: absolute; left: -2px; bottom: 100%;
+  display: flex; align-items: baseline; gap: var(--s2);
+  padding: 2px var(--s2);
+  background: rgba(6, 9, 13, 0.92); border: 1px solid var(--line);
+  font-family: var(--mono); font-size: 0.86rem; letter-spacing: 0.06em; white-space: nowrap;
+  cursor: grab;
+}
+.hle__f[data-lab="in"] .hle__lab { bottom: auto; top: 0; left: 0; }
+.hle__f[data-lab="below"] .hle__lab { bottom: auto; top: 100%; }
+.hle__ln { color: var(--ink); }
+.hle__ls { color: var(--c); }
+.hle__f.is-on .hle__lab { border-color: var(--y); }
+.hle__f.is-on .hle__ls { color: var(--y); }
+
+/* the handle sits on the corner opposite the anchor (layout.js sets data-h: br | bl | tr | tl) */
+.hle__h {
+  position: absolute; width: 1.1rem; height: 1.1rem;
+  background: var(--c); border: 2px solid rgba(3, 6, 9, 0.9);
+  cursor: nwse-resize;
+}
+.hle__f.is-on .hle__h { background: var(--y); }
+.hle__f[data-h="br"] .hle__h { right: -0.55rem; bottom: -0.55rem; }
+.hle__f[data-h="bl"] .hle__h { left: -0.55rem;  bottom: -0.55rem; cursor: nesw-resize; }
+.hle__f[data-h="tr"] .hle__h { right: -0.55rem; top: -0.55rem;    cursor: nesw-resize; }
+.hle__f[data-h="tl"] .hle__h { left: -0.55rem;  top: -0.55rem; }
+
+/* snap guides */
+.hle__gx, .hle__gy { position: absolute; background: var(--y); opacity: .85; }
+.hle__gx { top: 0; bottom: 0; width: 2px; margin-left: -1px; }
+.hle__gy { left: 0; right: 0; height: 2px; margin-top: -1px; }
+
+/* the panel: top centre, or bottom centre while the element being placed is under it */
+.hle__bar {
+  position: absolute; left: 50%; top: 36vh; transform: translateX(-50%);
+  width: min(46rem, 92vw);
+  display: grid; gap: var(--s3);
+  padding: var(--s4) var(--s5);
+  background: rgba(6, 9, 13, 0.94); border: 1px solid var(--line); border-top: 3px solid var(--y);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--cut)), calc(100% - var(--cut)) 100%, 0 100%);
+}
+.hle__bar[data-pos="top"] { top: 3vh; }
+/* while dragging you see (and drop) through it */
+.hle.is-dragging .hle__bar { opacity: .3; pointer-events: none; }
+.hle__bar[data-pos="bottom"] { top: auto; bottom: 3vh; }
+.hle__head { display: flex; align-items: baseline; justify-content: space-between; gap: var(--s4); min-width: 0; }
+.hle__title { font-weight: 700; font-size: 1.3rem; letter-spacing: 0.16em; color: var(--y); white-space: nowrap; }
+.hle__sel { font-family: var(--mono); font-size: 1rem; color: var(--ink2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+
+.hle__acts { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: var(--s2); }
+.hle__btn {
+  display: grid; justify-items: center; gap: 0;
+  min-height: 2.9rem; padding: var(--s2) var(--s2);
+  background: var(--plate2); border: 1px solid var(--line); color: var(--ink);
+  font-family: var(--disp); font-weight: 600; font-size: 1rem; letter-spacing: 0.06em;
+  cursor: pointer;
+  transition: background .12s ease, border-color .12s ease;
+}
+.hle__btn:hover { border-color: var(--c); background: rgba(17, 26, 35, 0.95); }
+.hle__btn:active { transform: translateY(1px); }
+.hle__btn:focus-visible { outline: 2px solid var(--y); outline-offset: 2px; }
+.hle__btn.is-off .hle__bl { color: var(--ink3); }
+.hle__btn--go { background: var(--y); border-color: var(--y); color: #0a0a00; }
+.hle__btn--go:hover { background: #fff35a; border-color: #fff35a; }
+.hle__bl { white-space: nowrap; }
+.hle__bk { font-family: var(--mono); font-size: 0.86rem; color: var(--ink3); white-space: nowrap; }
+.hle__btn--go .hle__bk { color: #4a4500; }
+
+.hle__hint, .hle__status { margin: 0; font-size: 0.95rem; line-height: 1.4; color: var(--ink2); text-wrap: pretty; }
+.hle__status[data-tone="bad"] { color: #ffc9cc; }
+
+@media (prefers-reduced-motion: reduce) {
+  .hle__f, .hle__btn { transition: none; }
+}

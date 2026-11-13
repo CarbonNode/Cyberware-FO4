@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+# Extracted CP2077 assets stay on the test rig and out of git.
+# Extracted game assets must never be committed or distributed.
+assets/

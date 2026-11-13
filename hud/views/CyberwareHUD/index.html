@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cyberware HUD</title>
+<link rel="stylesheet" href="fonts.css">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="accent.css">
+<link rel="stylesheet" href="layout.css">
+</head>
+<body>
+
+<!-- The whole overlay. Transparent by design: the game plays through it.
+     data-visible="false" hides everything (menus, Pip-Boy, dialogue). -->
+<div class="hud" id="hud" data-visible="false" data-combat="false">
+
+  <!-- Threat Detector: one chevron per hostile, on the screen edge, pointing
+       the way the hostile is. Positioned by hud.js from its bearing. -->
+  <div class="threats" id="threats" aria-hidden="true"></div>
+
+  <!-- ============ top left: Kiroshi scan / zoom ============ -->
+  <div class="rail rail--tl">
+    <section class="plate plate--optic" id="optic" hidden aria-label="Kiroshi optics">
+      <span class="optic__bar" aria-hidden="true"></span>
+      <span class="optic__text">
+        <span class="optic__mode" id="optic-mode">SCAN</span>
+        <span class="plate__tag" id="optic-tag">KIROSHI</span>
+      </span>
+    </section>
+  </div>
+
+  <!-- ============ top right: Target Analysis + Machine Learning ============ -->
+  <div class="rail rail--tr">
+
+    <section class="plate plate--target" id="target" hidden aria-label="Target analysis">
+      <header class="target__head">
+        <span class="plate__tag">TARGET ANALYSIS</span>
+        <span class="target__dist"><b id="t-dist">0</b><i>m</i></span>
+      </header>
+
+      <h2 class="target__name" id="t-name">&nbsp;</h2>
+
+      <div class="target__hp">
+        <div class="bar bar--hp">
+          <div class="bar__fill" id="t-hp-fill"></div>
+        </div>
+        <span class="target__hpnum"><b id="t-hp">0</b><i>/</i><span id="t-hpmax">0</span></span>
+      </div>
+
+      <div class="target__body">
+        <!-- Resistances. Two cells, one shape, always both present. -->
+        <ul class="res">
+          <li class="res__c"><span class="res__k">DR</span><span class="res__v" id="t-dr">0</span></li>
+          <li class="res__c"><span class="res__k">ER</span><span class="res__v" id="t-er">0</span></li>
+        </ul>
+
+        <!-- Weak point. A schematic figure, not an icon: six limb groups,
+             the vulnerable one lit. Driven by vulnLimbGroup, never by name. -->
+        <div class="weak" id="weak" hidden>
+          <div class="fig" id="fig" aria-hidden="true">
+            <span class="fig__p fig__p--head" data-g="1"></span>
+            <span class="fig__p fig__p--la"   data-g="2"></span>
+            <span class="fig__p fig__p--torso" data-g="0"></span>
+            <span class="fig__p fig__p--ra"   data-g="3"></span>
+            <span class="fig__p fig__p--ll"   data-g="4"></span>
+            <span class="fig__p fig__p--rl"   data-g="5"></span>
+          </div>
+          <span class="weak__text">
+            <span class="plate__tag">WEAK POINT</span>
+            <span class="weak__limb" id="t-limb">&nbsp;</span>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <section class="plate plate--ml" id="ml" hidden aria-label="Machine Learning stacks">
+      <span class="plate__tag">MACHINE LEARNING</span>
+      <div class="ml__row">
+        <ul class="pips" id="ml-pips"></ul>
+        <span class="ml__x" id="ml-x" hidden>x2</span>
+        <span class="ml__t"><b id="ml-until">0</b><i>s</i></span>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ============ bottom left: other cyberware timers, then the cyberdeck ============
+       Above the vanilla FO4 health and AP bars, never on them. -->
+  <div class="rail rail--bl">
+    <section class="plate plate--timers" id="timers" hidden aria-label="Cyberware timers">
+      <ul class="tmrs" id="tmrs"></ul>
+    </section>
+
+    <section class="plate plate--deck" id="deck" hidden aria-label="Cyberdeck">
+      <header class="deck__head">
+        <span class="plate__tag">RAM</span>
+        <span class="deck__num"><b id="ram-cur">0</b><i>/</i><span id="ram-max">0</span></span>
+      </header>
+      <ul class="cells" id="ram-cells"></ul>
+      <ul class="queue" id="queue"></ul>
+    </section>
+  </div>
+
+  <!-- ============ bottom right: the OS meter and the launcher ============
+       Above the vanilla FO4 ammo counter, never on it. -->
+  <div class="rail rail--br">
+
+    <section class="plate plate--os" id="os" hidden aria-label="Operating system">
+      <div class="ring" id="os-ring" data-state="ready">
+        <svg class="ring__svg" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+          <circle class="ring__track" cx="50" cy="50" r="42"></circle>
+          <circle class="ring__arc" id="os-arc" cx="50" cy="50" r="42"></circle>
+        </svg>
+        <span class="ring__mid">
+          <b class="ring__v" id="os-v">&nbsp;</b>
+          <i class="ring__u" id="os-u">&nbsp;</i>
+        </span>
+      </div>
+      <span class="os__text">
+        <span class="plate__tag" id="os-tag">OS</span>
+        <span class="os__name" id="os-name">&nbsp;</span>
+      </span>
+    </section>
+
+    <section class="plate plate--pls" id="pls" hidden aria-label="Projectile launch system">
+      <div class="ring ring--sm" id="pls-ring" data-state="full">
+        <svg class="ring__svg" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+          <circle class="ring__track" cx="50" cy="50" r="42"></circle>
+          <circle class="ring__arc" id="pls-arc" cx="50" cy="50" r="42"></circle>
+        </svg>
+        <span class="ring__mid"><b class="ring__v" id="pls-n">0</b></span>
+      </div>
+      <span class="pls__text">
+        <span class="plate__tag">LAUNCHER</span>
+        <span class="os__name pls__state" id="pls-state">&nbsp;</span>
+        <ul class="pips pips--pls" id="pls-pips"></ul>
+      </span>
+    </section>
+
+
+  </div>
+
+  <div class="locks" id="smart-locks" aria-hidden="true"></div>
+
+</div>
+
+<script src="bridge.js"></script>
+<script src="accent.js"></script>
+<script src="layout.js"></script>
+<script src="mock.js"></script>
+<script src="hud.js"></script>
+</body>
+</html>

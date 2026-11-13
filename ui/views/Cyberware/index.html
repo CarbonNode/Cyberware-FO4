@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ripperdoc</title>
+<link rel="stylesheet" href="fonts.css">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="customize.css">
+<link rel="stylesheet" href="settings.css">
+<link rel="stylesheet" href="armory.css">
+<link rel="stylesheet" href="scene.css">
+</head>
+<body>
+
+<div class="cw" id="cw" data-view="chrome" data-pane="body">
+
+  <!-- ══════════════════ header ══════════════════ -->
+  <header class="hdr">
+    <div class="hdr__doc">
+      <span class="hdr__mark" aria-hidden="true"></span>
+      <span class="hdr__doctext">
+        <span class="hdr__docname" id="doc-name">&nbsp;</span>
+        <span class="hdr__dockind" id="doc-kind">Ripperdoc</span>
+      </span>
+    </div>
+
+    <div class="seg seg--4 hdr__view" role="tablist" aria-label="Section" id="view-tabs">
+      <button type="button" class="seg__c is-on" role="tab" aria-selected="true"  data-v="chrome">Chrome</button>
+      <button type="button" class="seg__c"       role="tab" aria-selected="false" data-v="perks">Perks</button>
+      <button type="button" class="seg__c"       role="tab" aria-selected="false" data-v="customize">Customize</button>
+      <button type="button" class="seg__c"       role="tab" aria-selected="false" data-v="armory" hidden>Armory</button>
+      <button type="button" class="seg__c"       role="tab" aria-selected="false" data-v="settings">Settings</button>
+    </div>
+
+    <label class="srch srch--hdr">
+      <span class="srch__glyph" aria-hidden="true">
+        <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 L21 21"/></svg>
+      </span>
+      <input type="search" id="find-all" class="srch__input" placeholder="Search all cyberware…"
+             autocomplete="off" spellcheck="false" aria-label="Search all cyberware">
+      <button type="button" class="srch__clear" id="find-all-clear" aria-label="Clear search" hidden>&#215;</button>
+    </label>
+
+    <div class="cap">
+      <div class="cap__top">
+        <span class="cap__label">Capacity</span>
+        <span class="cap__num"><b id="cap-used">0</b><i>/</i><b id="cap-max">0</b></span>
+      </div>
+      <div class="cap__track" id="cap-track">
+        <div class="cap__fill" id="cap-fill"></div>
+        <div class="cap__pre"  id="cap-pre"></div>
+      </div>
+      <span class="cap__bonus" id="cap-bonus" hidden></span>
+    </div>
+
+    <div class="wallet">
+      <span class="wal">
+        <span class="wal__k" id="cur-name">Caps</span>
+        <span class="wal__v wal__v--cur" id="w-caps">0</span>
+      </span>
+      <span class="wal">
+        <span class="wal__k">Level</span>
+        <span class="wal__v" id="w-level">0</span>
+      </span>
+      <span class="wal">
+        <span class="wal__k">Perk Pts</span>
+        <span class="wal__v wal__v--perk" id="w-perk">0</span>
+      </span>
+    </div>
+
+    <button type="button" class="closebtn" id="btn-close">
+      <span class="closebtn__k">ESC</span>
+      <span class="closebtn__t">Close</span>
+    </button>
+  </header>
+
+  <!-- ══════════════════ chrome view ══════════════════ -->
+  <main class="grid" id="view-chrome">
+
+    <!-- column 1 · body map -->
+    <section class="pane pane--body" id="pane-body" aria-label="Chrome map">
+      <div class="pane__head">
+        <h2 class="pane__h">Chrome Map</h2>
+        <span class="pane__sub" id="body-sub">&nbsp;</span>
+      </div>
+
+      <div class="bodymap" id="bodymap">
+        <div class="bodymap__rail" id="rail-l"></div>
+        <div class="bodymap__fig">
+          <img class="bodymap__scan" src="icons/body-scan.png" width="404" height="834"
+               alt="Anatomical scan showing where each cyberware slot sits on the body">
+          <div class="bodymap__pins" id="body-pins"></div>
+        </div>
+        <div class="bodymap__rail" id="rail-r"></div>
+      </div>
+
+      <div class="totals">
+        <h3 class="totals__h">Active Chrome</h3>
+        <ul class="totals__list" id="totals-list"></ul>
+        <ul class="abil" id="abil-list"></ul>
+      </div>
+    </section>
+
+    <!-- column 2 · slot browser -->
+    <section class="pane pane--list" id="pane-list" aria-label="Cyberware for this slot">
+      <div class="pane__head">
+        <button type="button" class="back" id="back-body"><span aria-hidden="true">&#8592;</span> Map</button>
+        <h2 class="pane__h pane__h--flow" id="list-title">&nbsp;</h2>
+        <span class="pane__sub" id="list-sub">&nbsp;</span>
+      </div>
+
+      <label class="srch">
+        <span class="srch__glyph" aria-hidden="true">
+          <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 L21 21"/></svg>
+        </span>
+        <input type="search" id="find-slot" class="srch__input" placeholder="Filter this slot…"
+               autocomplete="off" spellcheck="false" aria-label="Filter cyberware in this slot">
+        <button type="button" class="srch__clear" id="find-slot-clear" aria-label="Clear filter" hidden>&#215;</button>
+      </label>
+
+      <div class="seg seg--4" role="tablist" aria-label="Filter" id="list-filter">
+        <button type="button" class="seg__c is-on" role="tab" aria-selected="true"  data-f="all">All</button>
+        <button type="button" class="seg__c"       role="tab" aria-selected="false" data-f="installed">Installed</button>
+        <button type="button" class="seg__c"       role="tab" aria-selected="false" data-f="stash">Stash</button>
+        <button type="button" class="seg__c"       role="tab" aria-selected="false" data-f="buy">Can Buy</button>
+      </div>
+
+      <ul class="rows" id="rows" role="listbox" aria-label="Cyberware"></ul>
+      <p class="rows__none" id="rows-none" hidden>Nothing matches that.</p>
+
+      <div class="mark" id="list-mark" aria-hidden="true"><img id="list-mark-img" src="" alt=""></div>
+
+      <section class="pos" id="positions" hidden aria-label="Positions in this slot">
+        <h3 class="pos__h" id="pos-h">Positions</h3>
+        <div class="pos__cells" id="pos-cells"></div>
+      </section>
+
+      <footer class="pane__foot">
+        <span id="rows-count">&nbsp;</span>
+        <span class="keys" id="list-keys"><span class="kg" data-p="1"><kbd>/</kbd> find</span><span class="kg" data-p="2"><kbd>PgUp</kbd><kbd>PgDn</kbd> section</span><span class="kg" data-p="3"><kbd>&#8593;&#8595;</kbd> move</span><span class="kg" data-p="1.5" id="kg-qh" hidden><kbd>Q</kbd> quickhacks</span><span class="kg" data-p="4"><kbd>L</kbd> HUD layout</span><span class="kg" data-p="5"><kbd>1</kbd>&#8211;<kbd>5</kbd> tabs</span></span>
+      </footer>
+    </section>
+
+    <!-- column 3 · detail -->
+    <section class="pane pane--detail" id="pane-detail" aria-label="Cyberware detail">
+      <div class="pane__head pane__head--d">
+        <button type="button" class="back" id="back-list"><span aria-hidden="true">&#8592;</span> List</button>
+      </div>
+
+      <div class="blank" id="detail-blank">
+        <span class="blank__mark" aria-hidden="true"></span>
+        <p class="blank__t">Pick a slot on the chrome map,<br>then a piece of cyberware.</p>
+      </div>
+
+      <div class="dt" id="detail" hidden>
+        <header class="dt__head">
+          <span class="dt__iconwrap"><img class="dt__icon" id="d-icon" src="" alt="" width="160" height="160"></span>
+          <div class="dt__titles">
+            <span class="dt__maker" id="d-maker">&nbsp;</span>
+            <h2 class="dt__name" id="d-name">&nbsp;</h2>
+            <div class="chips" id="d-chips"></div>
+          </div>
+        </header>
+
+        <p class="dt__desc" id="d-desc">&nbsp;</p>
+
+        <div class="seg seg--5" role="tablist" aria-label="Detail sections" id="dt-tabs">
+          <button type="button" class="seg__c is-on" role="tab" aria-selected="true"  data-t="stats">Stats</button>
+          <button type="button" class="seg__c"       role="tab" aria-selected="false" data-t="tiers">Tiers</button>
+          <button type="button" class="seg__c"       role="tab" aria-selected="false" data-t="mods">Mods</button>
+          <button type="button" class="seg__c"       role="tab" aria-selected="false" data-t="rolls">Rolls</button>
+          <button type="button" class="seg__c"       role="tab" aria-selected="false" data-t="looks">Looks</button>
+        </div>
+
+        <div class="dt__panel" id="dt-panel" role="tabpanel" tabindex="0"></div>
+        <section class="fit" id="dt-fit" hidden aria-label="What this piece does to your build"></section>
+        <div class="mark mark--dt" id="dt-mark" aria-hidden="true"><img id="dt-mark-img" src="" alt=""></div>
+        <!-- F: what is still to do with a piece you own but have not fitted -->
+        <p class="dt__next" id="dt-next" hidden></p>
+        <p class="dt__why" id="dt-why" hidden></p>
+        <div id="dt-bill" hidden></div>
+        <footer class="dt__acts" id="dt-acts"></footer>
+      </div>
+    </section>
+  </main>
+
+  <!-- ══════════════════ perks view ══════════════════ -->
+  <main class="perkview" id="view-perks" hidden>
+    <div class="perkview__head">
+      <h2 class="pane__h">Cyber Perks</h2>
+      <p class="perkview__lede">
+        Perks change how all your chrome behaves — capacity, how much each piece costs to carry,
+        how many positions a slot has, and what the ripperdoc charges.
+      </p>
+      <div class="perkpts">
+        <span class="perkpts__v" id="pp-available">0</span>
+        <span class="perkpts__k">points<br>available</span>
+        <span class="perkpts__sub" id="pp-sub">&nbsp;</span>
+      </div>
+    </div>
+
+    <label class="srch srch--perk">
+      <span class="srch__glyph" aria-hidden="true">
+        <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 L21 21"/></svg>
+      </span>
+      <input type="search" id="find-perk" class="srch__input" placeholder="Filter perks…"
+             autocomplete="off" spellcheck="false" aria-label="Filter perks">
+      <button type="button" class="srch__clear" id="find-perk-clear" aria-label="Clear filter" hidden>&#215;</button>
+    </label>
+
+    <ul class="perks" id="perks"></ul>
+    <p class="rows__none" id="perks-none" hidden>No perk matches that.</p>
+  </main>
+
+  <!-- ══════════════════ customize view (customize.js builds it) ══════════════════ -->
+  <main class="custom" id="view-customize" hidden></main>
+
+  <!-- ══════════════════ armory view (ARMORY; rendered by armory.js; tab only while this doc sells gear) ══════════════════ -->
+  <main class="armview" id="view-armory" hidden></main>
+
+  <!-- ══════════════════ settings view (BETA QA; rendered by settings.js) ══════════════════ -->
+  <main class="setview" id="view-settings" hidden></main>
+
+  <!-- ══════════════════ popout (confirm / pickers) ══════════════════ -->
+  <div class="scrim" id="scrim" hidden>
+    <div class="pop" role="dialog" aria-modal="true" aria-labelledby="pop-title" id="pop">
+      <header class="pop__head">
+        <h2 class="pop__title" id="pop-title">&nbsp;</h2>
+        <button type="button" class="pop__x" id="pop-x" aria-label="Close">&#215;</button>
+      </header>
+      <div class="pop__body" id="pop-body"></div>
+      <footer class="pop__foot" id="pop-foot"></footer>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" hidden role="status" aria-live="polite"><span id="toast-text"></span></div>
+
+  <!-- ══════════════════ install scene (INSTALL SCENE; sequenced by Cyberware.dll, drawn here) ══════════════════
+       docs/INSTALL-SCENE.md. The DLL pushes cwOnEvent {type:"scene", phase:...} and scene.js paints these layers.
+       There is NO centre black card any more (SCN-1): the clinic stays on screen behind letterbox bars, and the
+       only full-screen black is the 0.45 s dip that covers moving a standing player into the chair. -->
+  <div class="scene" id="scene" hidden aria-hidden="true">
+    <div class="scene__dip" id="scene-dip"></div><!-- the 0.45 s dip, and the 2D fallback's veil: never over 0.5 s -->
+    <div class="scene__bar scene__bar--top" id="scene-bar-top"></div>
+    <div class="scene__bar scene__bar--bot" id="scene-bar-bot">
+      <!-- her subtitle, in the lower bar so her face stays clear of it (SCN-3). LORE's seam: talk.js fills it. -->
+      <p id="scene-line" class="scene__sub" hidden></p>
+    </div>
+    <div class="scene__flare" id="scene-flare"></div><!-- beat 6: a flat fill, no blur filter (Ultralight) -->
+    <!-- beat 7: a lower-third, NOT a centred box -->
+    <div class="scene__third" id="scene-done" hidden>
+      <span class="scene__thirdrule" aria-hidden="true"></span>
+      <span class="scene__thirdkind" id="scene-done-kind">CHROME INSTALLED</span>
+      <span class="scene__thirdname" id="scene-done-name"></span>
+    </div>
+    <span class="scene__skip" id="scene-skip">any key to skip</span>
+  </div>
+
+  <div class="boot" id="boot">
+    <span class="boot__mark" aria-hidden="true"></span>
+    <p class="boot__t" id="boot-text">Linking to the ripperdoc&#8230;</p>
+  </div>
+</div>
+
+<script src="bridge.js"></script>
+<script src="mockengine.js"></script>
+<script src="data.js"></script>
+<script src="sound.js"></script>
+<script src="fx.js"></script>
+<script src="customize.js"></script>
+<script src="settings.js"></script>
+<script src="armory.js"></script>
+<script src="scene.js"></script>
+<script src="talk.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+{
+ "_comment": "Ripperdoc NPC + chair placement for espgen (FRAMEWORK). Read from Fallout4.esm on the test rig 2026-11-08; points checked against each cell navmesh. Rotations in radians (REFR DATA convention). chairExisting = reuse that vanilla ref, place no new chair. Generated from tools/catalog_data.py RIPPERDOCS; see docs/RIPPERDOCS.md.",
+ "ripperdocs": [
+  {
+   "id": "goodneighbor",
+   "name": "Doc Kessler",
+   "race": "GhoulRace",
+   "sex": "male",
+   "voice": "MaleGhoul",
+   "outfit": "WastelandDoctorOutfit (227ED3) + ClothesPiperGoggles (0A81B0) pushed up on the forehead",
+   "factions": [
+    "SettlementGoodneighbor (0228A9)",
+    "CrimeGoodneighbor (0228A8)"
+   ],
+   "cell": "Fallout4.esm|022884",
+   "cellEditorId": "GoodneighborTheMemoryDen",
+   "npcPos": [
+    2520,
+    -1900,
+    -254
+   ],
+   "npcRot": 2.03,
+   "chairPos": [
+    2592,
+    -1936,
+    -253
+   ],
+   "chairRot": 5.18,
+   "sitInChair": true,
+   "unlockDoors": [
+    "Fallout4.esm|0537C3"
+   ],
+   "docSeat": {
+    "base": "Fallout4.esm|01F74E",
+    "baseEditorId": "NpcChairFederalistSit01",
+    "pos": [
+     2656,
+     -1900,
+     -253
+    ],
+    "rot": 5.16
+   },
+   "chairBase": "Fallout4.esm|0CA06D",
+   "chairBaseEditorId": "NPCMemoryLounger01",
+   "outfitItems": [
+    "ClothesScientist_VariantWasteland",
+    "Clothes_Raider_Goggles"
+   ],
+   "headParts": [
+    "MaleHeadGhoul",
+    "MaleEyesGhoulYellowRing",
+    "MaleEyesGhoulAO",
+    "MaleHeadGhoulRear",
+    "MaleGhoulNeckGore",
+    "MaleMouthHumanoidDefault"
+   ]
+  },
+  {
+   "id": "diamondcity",
+   "name": "Dr. Ines Varga",
+   "race": "HumanRace",
+   "sex": "female",
+   "voice": "CW_VargaVoice",
+   "outfit": "ClothesScientist_VariantWasteland (178B68), clean",
+   "factions": [
+    "SettlementDiamondCity (002CB3)",
+    "CrimeDiamondCity (002CB4)"
+   ],
+   "cell": "Fallout4.esm|0198F1",
+   "cellEditorId": "DmndSurgeryBasement01",
+   "npcPos": [
+    1247,
+    -823,
+    -138
+   ],
+   "npcRot": 5.41,
+   "unlockDoors": [
+    "Fallout4.esm|019912"
+   ],
+   "chairExisting": "Fallout4.esm|019966",
+   "chairPos": [
+    1154,
+    -745,
+    -134
+   ],
+   "chairRot": 1.71,
+   "chairBase": "Fallout4.esm|052812",
+   "chairBaseEditorId": "FaceGenSurgeryChair",
+   "outfitItems": [],
+   "hairColor": "HairColor11WarmBlack",
+   "textureLighting": [
+    0.9686,
+    0.9373,
+    0.9333,
+    1.0
+   ],
+   "customOutfit": {
+    "edid": "CW_VargaDress",
+    "name": "Corporate Dress",
+    "body": "Cyberware\\Varga\\VargaDress.nif",
+    "hands": "Cyberware\\Varga\\VargaHands.nif",
+    "loupe": "Cyberware\\Varga\\VargaLoupe.nif",
+    "hair": "Cyberware\\Varga\\VargaHair.nif"
+   },
+   "headParts": [
+    "FemaleHeadHuman",
+    "MouthShadowFemale",
+    "FemaleEyesHumanLightGrey",
+    "FemaleEyesHumanWet",
+    "FemaleEyesHumanAO",
+    "FemaleEyesHumanLashes",
+    "FemaleMouthHumanoidDefault",
+    "FemaleHeadHumanRearTEMP",
+    "HairFemale14",
+    "HairFemale14_Hairline",
+    "FemaleNeckGore"
+   ],
+   "head": {
+    "from": "FemaleHeadHuman",
+    "edid": "CW_VargaHead",
+    "model": "Cyberware\\Varga\\VargaHead.nif",
+    "textureFrom": "SkinHeadFemaleHero",
+    "textureEdid": "CW_VargaSkinHead",
+    "diffuse": "Cyberware\\Varga\\VargaHead_d.dds",
+    "normal": "Cyberware\\Varga\\VargaHead_n.dds",
+    "smoothSpec": "Cyberware\\Varga\\VargaHead_s.dds"
+   }
+  },
+  {
+   "id": "institute",
+   "name": "Dr. Selwyn Achterberg",
+   "race": "HumanRace",
+   "sex": "male",
+   "voice": "InstituteScientistMaleVoice",
+   "outfit": "InstituteScientistSRB (1ACD15) outfit",
+   "factions": [
+    "InstituteFaction (05E558)"
+   ],
+   "cell": "Fallout4.esm|153795",
+   "cellEditorId": "InstituteSRB",
+   "npcPos": [
+    -355,
+    2151,
+    841
+   ],
+   "npcRot": 1.43,
+   "chairPos": [
+    -271,
+    2163,
+    842
+   ],
+   "chairRot": 4.57,
+   "sitInChair": true,
+   "chairBase": "Fallout4.esm|0DF458",
+   "chairBaseEditorId": "NPCInstituteReclamationChair01",
+   "outfitItems": [
+    "Clothes_InstituteLabCoat_blacksleeves",
+    "ClothesEyeGlasses"
+   ],
+   "hairColor": "HairColor09Gray",
+   "headParts": [
+    "MaleHeadHuman",
+    "MouthShadowMale",
+    "MaleEyesHumanSteel",
+    "MaleEyesHumanWet",
+    "MaleEyesHumanAO",
+    "MaleEyesHumanLashes",
+    "HairMale01",
+    "HairMale01_Hairline",
+    "MaleHeadHumanRearTEMP",
+    "MaleNeckGore",
+    "MaleMouthHumanoidDefault"
+   ]
+  }
+ ]
+}
