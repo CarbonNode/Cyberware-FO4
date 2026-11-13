@@ -17,17 +17,19 @@ Here:
 
 Not here:
 
-- **Anything from Cyberpunk 2077.** The mod uses assets converted from Cyberpunk 2077: arm meshes, textures,
-  animations, sounds, item icons, and the item names, descriptions and numbers. None of that is in this
-  repository, and neither are the tools that convert it. Cyberpunk 2077 and its content belong to
-  CD PROJEKT RED. This is an unofficial fan work, not approved or endorsed by them.
+- **Cyberpunk 2077 assets.** The mod uses assets converted from Cyberpunk 2077. **No Cyberpunk 2077 assets are
+  included: no art, textures, meshes, animations, audio or extracted game text, and no data baked from them.**
+  The tools that convert them and the item catalogue are left out too. **Item names and gameplay values that
+  refer to Cyberpunk 2077 do appear in the code**, including the catalogue builder and the tests. Cyberpunk 2077
+  and its content belong to CD PROJEKT RED. This is an unofficial fan work, not approved or endorsed by them.
 - **So this repository does not build a working mod by itself, and the plugin does not compile as it stands.**
   `framework/plugin/main.cpp` includes two generated headers, `mantis_fold3p.inl` and `mantis_stow3p.inl`, that
   hold animation keys and measurements baked from the converted Mantis Blades animation and meshes. They are
   left out with the rest of the converted content. Without the catalogue the plugin would also have no
   implants to sell. `tools/build_catalog.py` is the builder, but the data it reads (`catalog_data.py`
   and the files beside it) is not here, so it does not run from this repository. The headless core test
-  (`framework/test/cwtest.cpp`) compiles, but it needs a catalogue file to run and none is here either.
+  (`framework/test/cwtest.cpp`) is the one thing that was built from this tree (with `g++ -std=c++20`, together
+  with `framework/core/*.cpp`); it needs a catalogue file to run and none is here.
 - **The test harnesses.** The in-game test plugin and the browser checks for the views are tied to the
   author's test setup and are left out. `framework/xmake.lua` still names a `CWHarness` target for the in-game
   one; build the `Cyberware` target only.
@@ -58,6 +60,7 @@ To run the mod: Fallout 4 1.10.163, F4SE 0.6.23, Address Library for F4SE Plugin
 
 GPL-3.0-or-later for the code and original art in this repository: `LICENSE` is the licence text, `NOTICE` is the
 copyright notice and the list of third-party files.
-`framework/third_party/nlohmann/json.hpp` is MIT, copyright its authors. `framework/plugin/PrismaUI_F4_API.h`
-is Prisma UI's own API header, copied in as that header invites, copyright its authors. The fonts under
+Third-party files keep their own terms: `framework/third_party/nlohmann/json.hpp` is MIT, copyright its authors;
+`framework/plugin/PrismaUI_F4_API.h` is Prisma UI's API header, under its own notice (its first lines invite
+modders to copy it into their project), copyright its authors. The fonts under
 `ui/views` and `hud/views` are under the SIL Open Font License; each font folder carries the licence text.

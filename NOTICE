@@ -16,10 +16,12 @@ You should have received a copy of the GNU General Public License along with
 this program (the file LICENSE).  If not, see <https://www.gnu.org/licenses/>.
 
 This licence covers the code and the original art in this repository. It does
-not cover Cyberpunk 2077 or anything taken or converted from it; no such
-content is in this repository, and it belongs to CD PROJEKT RED.
+not cover Cyberpunk 2077, which belongs to CD PROJEKT RED. No Cyberpunk 2077
+assets are included: no art, textures, meshes, animations, audio or extracted
+game text, and no data baked from them. Item names and gameplay values that
+refer to Cyberpunk 2077 do appear in the code.
 
 Third-party components in this repository keep their own licences:
   framework/third_party/nlohmann/json.hpp   MIT, copyright its authors (see the file's header)
-  framework/plugin/PrismaUI_F4_API.h        Prisma UI's API header, copied in as its own text invites; copyright its authors
+  framework/plugin/PrismaUI_F4_API.h        Prisma UI's API header, under its own notice; copyright its authors
   Rajdhani, Share Tech Mono (fonts)         SIL Open Font License 1.1 (the OFL-*.txt beside each font folder)
